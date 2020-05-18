@@ -33,7 +33,7 @@ body {
                 width:40%;
                 position: absolute;
                 bottom: 0;
-                left; 0;
+                left: 0;
                 font-family: helvetica, monospace, sans-serif;
             }
             .highlight {
@@ -76,3 +76,5 @@ body {
                 left:1%;
                 top:1%;
             }
+
+            body {background-color:black}
