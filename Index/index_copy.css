@@ -23,6 +23,7 @@ body {
 .btn {
     color: rgb(32, 218, 110);
     font-size:20px;
+    
 }
 
 .dropdown {
@@ -34,12 +35,12 @@ body {
     width:50%;
 }
 
-.why, .asc {
+.why, .asc, .game {
     position:relative;
     color:blue;
     }
 
-.why ul, .asc ul {
+.why ul, .asc ul , .game ul{
     position:absolute;
     left: 0px;
     margin-top:10px;
@@ -50,17 +51,19 @@ body {
     list-style: none;
     border-radius:5px;
     opacity: 0;
-    pointer-events: all;
+    pointer-events: none;
     transform: translateY(-10px);
-    transition: all 0.4s ease;
+    transition: all 0.5s ease;
 }
 
-.why a, .asc a{
-    color:blue;
+.why a, .asc a, .game a{
+    color:olivedrab;
     text-decoration:none;
+    font-size:20px;
 }
 
 .dropdown button {
+    margin:auto;
     background: none;
     border: none;
     cursor: pointer;
@@ -68,18 +71,26 @@ body {
 }
 
 
-.why li:hover, .asc li:hover {
-    background-color:gray;
+.why li:hover, .asc li:hover, .game li:hover {
+    background-color:rgba(104, 12, 12, 0.350);
+    pointer-events: all;
 }
 
-.why li, .asc li {
+.why li, .asc li, .game li{
     display:flex;
     justify-content:center;
     align-items:center;
+
 }
 
-.why button:focus + ul, .asc button:focus +ul{
+.why button:focus + ul, .asc button:focus + ul, .game button:focus + ul{
 opacity:1;
-pointer-events:all;
+pointer-events: all;
 transform: translateY(0px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
