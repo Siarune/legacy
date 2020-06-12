@@ -9,6 +9,7 @@ body {
     left:0;
     width:100%;
     height:7.5%;
+    border-bottom:5px whitesmoke solid;
 }
 
 #fck {
@@ -19,7 +20,10 @@ body {
 }
 
 
-
+.btn {
+    color: rgb(32, 218, 110);
+    font-size:20px;
+}
 
 .dropdown {
     height:10vh;
@@ -46,8 +50,8 @@ body {
     list-style: none;
     border-radius:5px;
     opacity: 0;
-    pointer-events: none;
-    tranform: translateY(-10px);
+    pointer-events: all;
+    transform: translateY(-10px);
     transition: all 0.4s ease;
 }
 
@@ -65,7 +69,7 @@ body {
 
 
 .why li:hover, .asc li:hover {
-    background-color:orange;
+    background-color:gray;
 }
 
 .why li, .asc li {
@@ -77,5 +81,5 @@ body {
 .why button:focus + ul, .asc button:focus +ul{
 opacity:1;
 pointer-events:all;
-tranform: translateY(0px);
+transform: translateY(0px);
 }
