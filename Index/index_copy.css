@@ -10,3 +10,71 @@ body {
     width:100%;
     height:7.5%;
 }
+
+#fck {
+    position: absolute;
+    left:10%;
+    top:10%;
+}
+
+
+
+
+.dropdown {
+    height:10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:auto;
+    width:50%;
+}
+
+.why, .asc {
+    position:relative;
+    color:blue;
+    }
+
+.why ul, .asc ul {
+    position:absolute;
+    left: 0px;
+    margin-top:10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius:5px;
+    opacity: 0;
+    pointer-events: none;
+    tranform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.why a, .asc a{
+    color:blue;
+    text-decoration:none;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+.why li:hover, .asc li:hover {
+    background-color:orange;
+}
+
+.why li, .asc li {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.why button:focus + ul, .asc button:focus +ul{
+opacity:1;
+pointer-events:all;
+tranform: translateY(0px);
+}
