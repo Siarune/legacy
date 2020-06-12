@@ -10,13 +10,27 @@ body {
     width:100%;
     height:7.5%;
     border-bottom:5px #bbe1fa solid;
+    padding:5px;
+    margin:5px;
+}
+
+footer {
+    background-color:black;
+    width:100%;
+    height: 5%;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    color: rgb(167, 149, 30);
+    font-size:1.25em;
+    text-decoration: none;
 }
 
 
 .btn {
     color: #bbe1fa;
     font-size:1.5em;
-    
+    margin:10px;
 }
 
 .dropdown {
