@@ -26,6 +26,20 @@ footer {
     text-decoration: none;
 }
 
+#text {
+    color:aquamarine;
+    position:absolute;
+    top:25%
+}
+
+#head {
+    font-size:1.5em;
+}
+
+#low {
+    font-size:20px;
+    width:60%
+}
 
 .btn {
     color: #bbe1fa;
