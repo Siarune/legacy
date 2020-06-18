@@ -42,12 +42,12 @@ footer {
     width:50%;
 }
 
-.why, .asc, .game {
+.why, .asc, .game, .about, .app {
     position:relative;
     color: #bbe1fa;
     }
 
-.why ul, .asc ul , .game ul{
+.why ul, .asc ul , .game ul, .about ul, .app ul{
     position:absolute;
     left: 0px;
     margin-top:10px;
@@ -63,7 +63,7 @@ footer {
     transition: all 0.5s ease;
 }
 
-.why a, .asc a, .game a{
+.why a, .asc a, .game a, .about a, .app a{
     color: #bbe1fa;
     text-decoration:none;
     font-size:20px;
@@ -78,19 +78,19 @@ footer {
 }
 
 
-.why li:hover, .asc li:hover, .game li:hover {
+.why li:hover, .asc li:hover, .game li:hover, .about li:hover, .app li:hover {
     background-color: #3282b880;
     pointer-events: all;
 }
 
-.why li, .asc li, .game li{
+.why li, .asc li, .game li, .about li, .app li{
     display:flex;
     justify-content:center;
     align-items:center;
 
 }
 
-.why button:focus + ul, .asc button:focus + ul, .game button:focus + ul{
+.why button:focus + ul, .asc button:focus + ul, .game button:focus + ul, .about button:focus + ul, .app button:focus + ul{
 opacity:1;
 pointer-events: all;
 transform: translateY(0px);
