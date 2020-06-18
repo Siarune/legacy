@@ -45,6 +45,8 @@ footer {
     color: #bbe1fa;
     font-size:1.5em;
     margin:10px;
+    position:relative;
+    bottom:10px;
 }
 
 .dropdown {
