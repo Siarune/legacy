@@ -61,6 +61,7 @@ footer {
 .why, .asc, .game, .about, .app {
     position:relative;
     color: #bbe1fa;
+    margin-left:7.5%;
     }
 
 .why ul, .asc ul , .game ul, .about ul, .app ul{
@@ -117,3 +118,13 @@ transform: translateY(0px);
   padding: 0;
   box-sizing: border-box;
 }
+
+#nyan {
+    position:absolute;
+    right:2%;
+    top:9%;
+    z-index: 10;
+}
+
+
+
