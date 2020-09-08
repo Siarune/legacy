@@ -1,11 +1,11 @@
-1 The endings are
-goodEnd
-badEnd
-heDed
-heDed2
-runOver
-runoverPt2
+The endings are
+[5-2]
+[7-2]
+[8-1]
+[9-1]
+[9-2]
 
-starter.html is the start point
+
+[0] is the start point
 
 not all pages have more than one option but most is just filler.

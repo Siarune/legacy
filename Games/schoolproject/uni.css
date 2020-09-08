@@ -16,14 +16,14 @@
     }
 
     button:hover {
-        box-shadow: 2px 2px 2px 2px rgba(100, 100, 100, 0.5);
+        box-shadow: 2px 2px 2px 2px rgba(175, 175, 175, 0.5);
         background-color:rgb(230, 230, 230);
     }
 
     h1 {
         position:relative;
         top:5%;
-        border-bottom:2px darkgray solid;
+        border-bottom:2px aquamarine solid;
         font-size:1.2em;
         color:antiquewhite;
 
