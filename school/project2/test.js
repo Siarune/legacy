@@ -450,21 +450,49 @@ timer.start();	}
     
     
 
-		var answers = ['Acounting','Chemistry','Busness','Arrest for my murder! You Become a professional inmate','Biology','Design','Computer Science','Music','History','Law','Language Studies','Teacher'];
+		var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
 	
 if (document.getElementById('1-1').checked ) {
-		{document.getElementById('subjectParagraph').innerHTML = 'Your major should be ' + answers[3] + '         ' + '<img src = >';}
+		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + '         ' + '<img src = >';}
 	}
 	
 	else if(document.getElementById('2-1').checked  &&  document.getElementById('2-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'Your major should be ' + answers[1] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('3-1').checked  &&  document.getElementById('14').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'Your major should be ' + answers[1] + '         ' + '<img src = >';}
+else if(document.getElementById('3-1').checked  &&  document.getElementById('3-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + '         ' + '<img src = >';}
 }
 
-else {document.getElementById('subjectParagraph').innerHTML = 'Your major should be ' + answers[4] + '         ' + '<img src = >';}
+else if(document.getElementById('4-1').checked  &&  document.getElementById('4-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('5-1').checked  &&  document.getElementById('5-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('6-1').checked  &&  document.getElementById('6-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('7-1').checked  &&  document.getElementById('7-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('8-1').checked  &&  document.getElementById('8-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('9-1').checked  &&  document.getElementById('9-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + '         ' + '<img src = >';}
+}
+
+else if(document.getElementById('10-1').checked  &&  document.getElementById('10-1').checked )    {
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[11] + '         ' + '<img src = >';}
+}
+
+else {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[0] + '         ' + '<img src = >';}
 
 }
 
