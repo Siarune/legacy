@@ -1,10 +1,11 @@
 
 * {
     font-size:30px;
+    color:paleturquoise;
 }
 
 body {
-    background:url(amos.jpg);
+    background:url(pic1.jpg);
     background-repeat: none;
 }
 
@@ -24,7 +25,7 @@ h2 {
 }
 
 form{
-	background-color: rgba(200, 200, 200, 0.5); 
+	background-color: rgba(0, 0, 0, 0.8); 
 	color: #ffffff; 
 	font-family: sans-serif; 
 	text-align: right;
@@ -34,22 +35,21 @@ form{
 blockquote {
     border-bottom:2px solid white;
     padding-bottom:5px;
+    text-align:left;
 }
 
-    #subjectParagraph {
-    color:white;
-}
+
 
 input[type=radio]:checked+label {
 /* Or `#a1:checked+label` if you only want it for that input */
-    color: #A6670F;
+    color: #800000;
 }
 
 button {
-    border-radius:15px;
+    border-radius:30px;
+    border:none;
     background-color:gray;
-    color:white;
-    padding:5px;
     padding-right:10px;
     padding-left:10px;
 }   
+

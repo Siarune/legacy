@@ -28,11 +28,6 @@ function checkQuiz() {
 	var least;
 	var help;
 
-
-
-    
-    
-    
     // The input stuff
 
 	//get the input data as an array
@@ -47,7 +42,6 @@ function checkQuiz() {
 
 	}
 
- 
     var input2 = document.getElementsByName('question2');
 	//loop through all the possible inputs (the radio buttons)
 	for (var b=0; b < input2.length; b++) {
@@ -58,7 +52,6 @@ function checkQuiz() {
 		}
 	}
 
-    
     var input3 = document.getElementsByName('question3');
 	//loop through all the possible inputs (the radio buttons)
 	for (var c=0; c < input3.length; c++) {
@@ -138,47 +131,35 @@ function checkQuiz() {
 			//if it is save the house name
 			question10 = input10[j].value;
 		}
-	}
+    }
     
-    
-    
-    
-    
-    
+    while (!question1) {
+            alert('Please answer question 1');
+            var timer = {
+        interval: null,
+        seconds: 30,
 
+        start: function () {
+            var self = this,
+                el = document.getElementById('time-to-update');
 
+            el.innerText = this.seconds; // Output initial value
 
-while (!question1) {
-		alert('Please answer question 1');
-		 var timer = {
-    interval: null,
-    seconds: 30,
+            this.interval = setInterval(function () {
+                self.seconds--;
 
-    start: function () {
-        var self = this,
-            el = document.getElementById('time-to-update');
+                if (self.seconds == 0) 
+                    window.location.reload();
 
-        el.innerText = this.seconds; // Output initial value
-
-        this.interval = setInterval(function () {
-            self.seconds--;
-
-            if (self.seconds == 0) 
-                window.location.reload();
-
-            el.innerText = self.seconds;
-        }, 1000);
-    },
-
+                el.innerText = self.seconds;
+            }, 1000);
+        },
     stop: function () {
         window.clearInterval(this.interval)
     }
+            }
+    timer.start();	
 }
-timer.start();	}
-		
-    
-    
-    
 		while (!question2) {
 		alert('Please answer question 2');
 		var timer = {
@@ -205,11 +186,9 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
-timer.start();	}
-		
 
-
-    
+    timer.start();
+}
 		while (!question3) {
 		alert('Please answer question 3');
 		var timer = {
@@ -236,6 +215,7 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
+
 timer.start();	}
     
     		while (!question4) {
@@ -264,10 +244,8 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
-timer.start();	}
 
-    
-    
+timer.start();	}
 		while (!question5) {
 		alert('Please answer question 5');
 		var timer = {
@@ -324,8 +302,6 @@ timer.start();	}
     }
 }
 timer.start();	}
-    
-    
 		while (!question7) {
 		alert('Please answer question 7');
 		var timer = {
@@ -352,10 +328,8 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
-timer.start();	}
 
-    
-    
+timer.start();	}
     		while (!question8) {
 		alert('Please answer question 8');
 		var timer = {
@@ -382,9 +356,8 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
+
 timer.start();	}
-    
-    
 		while (!question9) {
 		alert('Please answer question 9');
 		var timer = {
@@ -411,10 +384,9 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
+
 timer.start();	}
-    
-    
-		while (!question10) {
+	while (!question10) {
 		alert('Please answer question 10');
 		var timer = {
     interval: null,
@@ -440,56 +412,49 @@ timer.start();	}
         window.clearInterval(this.interval)
     }
 }
-timer.start();	}
-    
-    
-    
-    
-    
-    
-    
-    
 
-		var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
+timer.start();	}
+
+var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
 	
 if (document.getElementById('1-1').checked ) {
-		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + '         ' + '<img src = >';}
+		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + '         ' + '<img src = >';}
 	}
 	
 	else if(document.getElementById('2-1').checked  &&  document.getElementById('2-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('3-1').checked  &&  document.getElementById('3-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('4-1').checked  &&  document.getElementById('4-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('5-1').checked  &&  document.getElementById('5-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('6-1').checked  &&  document.getElementById('6-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('7-1').checked  &&  document.getElementById('7-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('8-1').checked  &&  document.getElementById('8-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('9-1').checked  &&  document.getElementById('9-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + '         ' + '<img src = >';}
 }
 
 else if(document.getElementById('10-1').checked  &&  document.getElementById('10-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[11] + '         ' + '<img src = >';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + '         ' + '<img src = >';}
 }
 
 else {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[0] + '         ' + '<img src = >';}
