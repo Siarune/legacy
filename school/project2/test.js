@@ -415,18 +415,85 @@ timer.start();	}
 
 timer.start();	}
 
-var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
+//;var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
+
+//var answers = q1 + q2 + q3 + q4 + q5 + q7 + q8 + q9 + q10;
 var q1;
+var q2;
+var q3;
+var q4;
+var q5;
+var q6;
+var q7;
+var q8;
+var q9;
+var q10;
 
 if (document.getElementById('1-1').checked) {
         q1 = 10;
 }
-
 else q1 = 0;
+
+if (document.getElementById('2-1').checked) {
+        q2 = 10;
+}
+else q2 = 0;
+
+
+if (document.getElementById('3-1').checked) {
+        q3 = 10;
+}
+else q3 = 0;
+
+
+if (document.getElementById('4-1').checked) {
+        q4 = 10;
+}
+else q4 = 0;
+
+
+if (document.getElementById('5-1').checked) {
+        q5 = 10;
+}
+else q5 = 0;
+
+
+if (document.getElementById('6-1').checked) {
+        q6 = 10;
+}
+else q6 = 0;
+
+
+if (document.getElementById('7-1').checked) {
+        q7 = 10;
+}
+else q8 = 0;
+
+
+if (document.getElementById('8-1').checked) {
+        q8 = 10;
+}
+else q8 = 0;
+
+
+if (document.getElementById('9-1').checked) {
+        q9 = 10;
+}
+else q9 = 0;
+
+
+if (document.getElementById('10-1').checked) {
+        q10 = 10;
+}
+else q10 = 0;
+
+//(document.getElementById('subjectParagraph').innerHTML = `You got:${answers}%`
+
 
 
 
 /*
+
 if (document.getElementById('1-1').checked) {
 		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + '         ' + '<iframe src = "https://giphy.com/embed/xT0xeMTWSapSimGcBa" >';}
 	}
@@ -473,4 +540,4 @@ else {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answe
 */
 
 //call the initial function when the window is loaded
-window.onload = init;
+window.onload = init; }
