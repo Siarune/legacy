@@ -416,9 +416,19 @@ timer.start();	}
 timer.start();	}
 
 var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
-	
-if (document.getElementById('1-1').checked ) {
-		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + '         ' + '<img src = >';}
+var q1;
+
+if (document.getElementById('1-1').checked) {
+        q1 = 10;
+}
+
+else q1 = 0;
+
+
+
+/*
+if (document.getElementById('1-1').checked) {
+		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + '         ' + '<iframe src = "https://giphy.com/embed/xT0xeMTWSapSimGcBa" >';}
 	}
 	
 	else if(document.getElementById('2-1').checked  &&  document.getElementById('2-1').checked )    {
@@ -460,7 +470,7 @@ else if(document.getElementById('10-1').checked  &&  document.getElementById('10
 else {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[0] + '         ' + '<img src = >';}
 
 }
-
+*/
 
 //call the initial function when the window is loaded
 window.onload = init;
