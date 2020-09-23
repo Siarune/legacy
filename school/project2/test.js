@@ -417,7 +417,6 @@ timer.start();	}
 
 
 
-var answers = q1 + q2 + q3 + q4 + q5 + q7 + q8 + q9 + q10;
 var q1;
 var q2;
 var q3;
@@ -432,69 +431,99 @@ var q10;
 if (document.getElementById('1-1').checked) {
         q1 = 10;
 }
-else q1 = 0;
+if (document.getElementById('1-2'||'1-3'||'1-4'||'1-5'||'1-6').checked) {
+        q1 = 0;
+}
+
 
 if (document.getElementById('2-1').checked) {
         q2 = 10;
 }
-else q2 = 0;
+if (document.getElementById('2-2'||'2-3'||'2-4'||'2-5'||'2-6').checked) {
+        q2 = 0;
+}
 
 
 if (document.getElementById('3-1').checked) {
         q3 = 10;
 }
-else q3 = 0;
+if (document.getElementById('3-2'||'3-3'||'3-4'||'3-5'||'3-6').checked) {
+        q3 = 0;
+}
 
 
 if (document.getElementById('4-1').checked) {
         q4 = 10;
 }
-else q4 = 0;
+if (document.getElementById('4-2'||'4-3'||'4-4'||'4-5'||'4-6').checked) {
+        q4 = 0;
+}
 
 
 if (document.getElementById('5-1').checked) {
         q5 = 10;
 }
-else q5 = 0;
+if (document.getElementById('5-2'||'5-3'||'5-4'||'5-5'||'5-6').checked) {
+        q5 = 0;
+}
 
 
 if (document.getElementById('6-1').checked) {
         q6 = 10;
 }
-else q6 = 0;
+if (document.getElementById('6-2'||'6-3'||'6-4'||'6-5'||'6-6').checked) {
+        q6 = 0;
+}
 
 
 if (document.getElementById('7-1').checked) {
         q7 = 10;
 }
-else q8 = 0;
+if (document.getElementById('7-2'||'7-3'||'7-4'||'7-5'||'7-6').checked) {
+        q7 = 0;
+}
 
 
 if (document.getElementById('8-1').checked) {
         q8 = 10;
 }
-else q8 = 0;
+if (document.getElementById('8-2'||'8-3'||'8-4'||'8-5'||'8-6').checked) {
+        q8 = 0;
+}
 
 
 if (document.getElementById('9-1').checked) {
         q9 = 10;
 }
-else q9 = 0;
+if (document.getElementById('9-2'||'9-3'||'9-4'||'9-5'||'9-6').checked) {
+        q9 = 0;
+}
 
 
 if (document.getElementById('10-1').checked) {
         q10 = 10;
 }
-else q10 = 0;
-
-document.getElementById('subjectParagraph').innerHTML = `You got:` + answers + '%';
+if (document.getElementById('10-2'||'10-3'||'10-4'||'10-5'||'10-6').checked) {
+        q10 = 0;
 }
+
+var answers = q1 + q2 + q3 + q4 + q5 + q6 + q7 + q8 + q9 + q10;
+var out = 'You got:' + answers + '%';
+
+document.getElementById('subjectParagraph').innerHTML = out;
+
+if (!answers) {
+    {document.getElementById('subjectParagraph').innerHTML = `You got:0%`;}
+}
+
+}
+
 
 
 /*
 var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
 
-if (document.getElementById('1-1').checked) {
+if (document.getElementById('1-2').checked) {
 		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + '         ' + '<iframe src = "https://giphy.com/embed/xT0xeMTWSapSimGcBa" >';}
 	}
 	
@@ -502,23 +531,23 @@ if (document.getElementById('1-1').checked) {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('3-1').checked  &&  document.getElementById('3-1').checked )    {
+else if(document.getElementById('3-3').checked  &&  document.getElementById('3-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('4-1').checked  &&  document.getElementById('4-1').checked )    {
+else if(document.getElementById('4-2').checked  &&  document.getElementById('4-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('5-1').checked  &&  document.getElementById('5-1').checked )    {
+else if(document.getElementById('5-5').checked  &&  document.getElementById('5-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('6-1').checked  &&  document.getElementById('6-1').checked )    {
+else if(document.getElementById('6-6').checked  &&  document.getElementById('6-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('7-1').checked  &&  document.getElementById('7-1').checked )    {
+else if(document.getElementById('7-2').checked  &&  document.getElementById('7-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + '         ' + '<img src = >';}
 }
 
@@ -526,11 +555,11 @@ else if(document.getElementById('8-1').checked  &&  document.getElementById('8-1
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('9-1').checked  &&  document.getElementById('9-1').checked )    {
+else if(document.getElementById('9-3').checked  &&  document.getElementById('9-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + '         ' + '<img src = >';}
 }
 
-else if(document.getElementById('10-1').checked  &&  document.getElementById('10-1').checked )    {
+else if(document.getElementById('10-2').checked  &&  document.getElementById('10-1').checked )    {
 {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + '         ' + '<img src = >';}
 }
 
