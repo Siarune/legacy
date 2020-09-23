@@ -428,10 +428,10 @@ var q8;
 var q9;
 var q10;
 
-if (document.getElementById('1-1').checked) {
+if (document.getElementById('1-2').checked) {
         q1 = 10;
 }
-if (document.getElementById('1-2'||'1-3'||'1-4'||'1-5'||'1-6').checked) {
+if (document.getElementById('1-1'||'1-3'||'1-4'||'1-5'||'1-6').checked) {
         q1 = 0;
 }
 
@@ -444,42 +444,42 @@ if (document.getElementById('2-2'||'2-3'||'2-4'||'2-5'||'2-6').checked) {
 }
 
 
-if (document.getElementById('3-1').checked) {
+if (document.getElementById('3-3').checked) {
         q3 = 10;
 }
-if (document.getElementById('3-2'||'3-3'||'3-4'||'3-5'||'3-6').checked) {
+if (document.getElementById('3-2'||'3-1'||'3-4'||'3-5'||'3-6').checked) {
         q3 = 0;
 }
 
 
-if (document.getElementById('4-1').checked) {
+if (document.getElementById('4-2').checked) {
         q4 = 10;
 }
-if (document.getElementById('4-2'||'4-3'||'4-4'||'4-5'||'4-6').checked) {
+if (document.getElementById('4-1'||'4-3'||'4-4'||'4-5'||'4-6').checked) {
         q4 = 0;
 }
 
 
-if (document.getElementById('5-1').checked) {
+if (document.getElementById('5-5').checked) {
         q5 = 10;
 }
-if (document.getElementById('5-2'||'5-3'||'5-4'||'5-5'||'5-6').checked) {
+if (document.getElementById('5-2'||'5-3'||'5-4'||'5-1'||'5-6').checked) {
         q5 = 0;
 }
 
 
-if (document.getElementById('6-1').checked) {
+if (document.getElementById('6-6').checked) {
         q6 = 10;
 }
-if (document.getElementById('6-2'||'6-3'||'6-4'||'6-5'||'6-6').checked) {
+if (document.getElementById('6-2'||'6-3'||'6-4'||'6-5'||'6-1').checked) {
         q6 = 0;
 }
 
 
-if (document.getElementById('7-1').checked) {
+if (document.getElementById('7-2').checked) {
         q7 = 10;
 }
-if (document.getElementById('7-2'||'7-3'||'7-4'||'7-5'||'7-6').checked) {
+if (document.getElementById('7-1'||'7-3'||'7-4'||'7-5'||'7-6').checked) {
         q7 = 0;
 }
 
@@ -492,18 +492,18 @@ if (document.getElementById('8-2'||'8-3'||'8-4'||'8-5'||'8-6').checked) {
 }
 
 
-if (document.getElementById('9-1').checked) {
+if (document.getElementById('9-3').checked) {
         q9 = 10;
 }
-if (document.getElementById('9-2'||'9-3'||'9-4'||'9-5'||'9-6').checked) {
+if (document.getElementById('9-2'||'9-1'||'9-4'||'9-5'||'9-6').checked) {
         q9 = 0;
 }
 
 
-if (document.getElementById('10-1').checked) {
+if (document.getElementById('10-2').checked) {
         q10 = 10;
 }
-if (document.getElementById('10-2'||'10-3'||'10-4'||'10-5'||'10-6').checked) {
+if (document.getElementById('10-1'||'10-3'||'10-4'||'10-5'||'10-6').checked) {
         q10 = 0;
 }
 
