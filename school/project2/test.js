@@ -521,49 +521,62 @@ if (!answers) {
 
 var answers = ['0%','10%','20%','30%','40%','50%','60%','70%','80%','90%','100%'];
 if (document.getElementById('1-2').checked) {
-		{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + 'Bad job...' + '<iframe src="https://giphy.com/embed/3ov9k2Ce4sn264hffG" width="480" height="480">';}
+        {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[1] + 'Bad job...';}
+        {document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/3ov9k2Ce4sn264hffG" width="480" height="480">';}
 	}
 	
 	else if(document.getElementById('2-1').checked  &&  document.getElementById('2-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + 'Slightly not the worst.' + '<iframe src="https://giphy.com/embed/HHwI031emo0GQ" width="430" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[2] + 'Slightly not the worst.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/HHwI031emo0GQ" width="430" height="480">';}
 }
 
 else if(document.getElementById('3-3').checked  &&  document.getElementById('3-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '1/3 of my impossible expectations.' + '<iframe src="https://giphy.com/embed/3og0IB6pP3LiGyQvlK" width="480" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[3] + '1/3 of my impossible expectations.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/3og0IB6pP3LiGyQvlK" width="480" height="480">';}
 }
 
 else if(document.getElementById('4-2').checked  &&  document.getElementById('4-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + 'Its a forty, still a fail.' + '<iframe src="https://giphy.com/embed/3oFzmeVbeXIfBUl5sI" width="480" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[4] + 'Its a forty, still a fail.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/3oFzmeVbeXIfBUl5sI" width="480" height="480">';}
 }
 
 else if(document.getElementById('5-5').checked  &&  document.getElementById('5-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + 'Almost passing. Almost.' + '<iframe src="https://giphy.com/embed/alnAuFgoYMP6" width="480" height="450">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[5] + 'Almost passing. Almost.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/alnAuFgoYMP6" width="480" height="450">';}
 }
 
 else if(document.getElementById('6-6').checked  &&  document.getElementById('6-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + 'I guess this is a passing grade.' + '<iframe src="https://giphy.com/embed/bbJ9prAdyaIrm" width="480" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[6] + 'I guess this is a passing grade.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/bbJ9prAdyaIrm" width="480" height="480">';}
 }
 
 else if(document.getElementById('7-2').checked  &&  document.getElementById('7-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + 'I know right.' + '<iframe src="https://giphy.com/embed/xT9IgyvJGizZgxWGCA" width="480" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[7] + 'I know right.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/xT9IgyvJGizZgxWGCA" width="480" height="480">';}
 }
 
 else if(document.getElementById('8-1').checked  &&  document.getElementById('8-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + 'Meh, I guess you did well.' + '<iframe src = "https://giphy.com/embed/xT0xeMTWSapSimGcBa">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[8] + 'Meh, I guess you did well.';}
+{document.getElementById('pic').innerHTML = '<iframe src = "https://giphy.com/embed/xT0xeMTWSapSimGcBa">';}
 }
 
 else if(document.getElementById('9-3').checked  &&  document.getElementById('9-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + 'Almost there, but Im still surprised.' + '<iframe src="https://giphy.com/embed/148wdpS9I12Cru" width="468" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[9] + 'Almost there, but Im still surprised.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/148wdpS9I12Cru" width="468" height="480">';}
 }
 
 else if(document.getElementById('10-2').checked  &&  document.getElementById('10-1').checked )    {
-{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + 'You must have cheated but okay.' + '<iframe src="https://giphy.com/embed/KESQSCbtsnzq" width="480" height="480">';}
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[10] + 'You must have cheated but okay.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/KESQSCbtsnzq" width="480" height="480">';}
 }
 
-else {document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[0] + 'As expected.' + '<iframe src="https://giphy.com/embed/3ohhwm7G06MDZIhq12" width="480" height="480">';}
-
+else 
+{document.getElementById('subjectParagraph').innerHTML = 'You got:' + answers[0] + 'As expected.';}
+{document.getElementById('pic').innerHTML = '<iframe src="https://giphy.com/embed/3ohhwm7G06MDZIhq12" width="480" height="480">';}
 }
 
 
 //call the initial function when the window is loaded
 window.onload = init;
+
+//{document.getElementById('pic').innerHTML = '<iframe src="';}

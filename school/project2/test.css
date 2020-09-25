@@ -54,3 +54,12 @@ button {
     padding-left:10px;
 }   
 
+#again {
+    position:absolute;
+    right: 5px;
+    font-size: 20px;
+}
+
+#again a {
+    text-decoration: none;
+}
