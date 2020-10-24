@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #272727;
+  font-family: "anonymous-pro";
+  min-height: 100%;
+}
+
+nav {
+	background-color: darkcyan;
+	border-bottom: 5px solid #034A44;
+	height: auto;
+	position: fixed;
+	width: 100%;
+}
+
+#mid {
+	color: azure;
+	background-color: black;
+	width: 90%;
+	height: 80%;
+	align-self: center;
+	position: relative;
+	top: 70px;
+	left: 5%;
+	z-index: -2;
+}
+
+.text {
+	widows: inherit;
+	position: relative;
+	top: 150px;
+	padding: 10px;
+	width: 75%;
+}
+
+.text h2 {
+	text-align: center;
+}
+
+
+#post {
+	color: aliceblue;
+	font-size: 1.5em;
+	border: 5px groove gray;
+	text-align: center;
+	max-width:  200px;
+	padding: 5px;
+	position: absolute;
+	top: 15%;
+	left: 40%;
+	z-index:-3;
+	border-radius: 8px;
+}
+
+footer {
+	height: auto;
+	background-color: darkslategray;
+	color: darkgoldenrod;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 90%;
+	left: 5%;
+	z-index: -1;
+}
+
+a,
+button {
+  font-family: "anonymous-pro";
+}
+
+button {
+	border-radius: 3px;
+}
+
+.dropdown {
+  height: 10vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.why,
+.asc,
+.games,
+.owo,
+.abt {
+  position: relative;
+}
+
+.why ul,
+.asc ul,
+.games ul,
+.owo ul,
+.abt ul {
+  margin-top: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: white;
+  left: 0px;
+  list-style: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+.why li,
+.asc li,
+.games li,
+.owo li,
+.abt li{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.why li:hover,
+.asc li:hover,
+.games li:hover,
+.owo li:hover,
+.abt li:hover{
+  background-color: #8E8E8E;
+}
+
+.why a,
+.asc a,
+.games a,
+.owo a,
+.abt a{
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown button,
+.home {
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.why button:focus + ul,
+.asc button:focus + ul,
+.games button:focus + ul,
+.owo button:focus + ul,
+.abt button:focus + ul{
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
