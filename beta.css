@@ -59,7 +59,7 @@ nav {
 
 #post {
 	font-size: 1.5em;
-	border: 5px groove gray;
+	border: 5px groove rgb(161, 18, 18);
 	text-align: center;
 	max-width:  200px;
 	padding: 5px;
@@ -67,6 +67,12 @@ nav {
 	border-radius: 8px;
     position: relative;
     top: 75px;
+}
+
+#nyan {
+    position: relative;
+    top: 10px;
+    width: 150px;
 }
 
 footer {
