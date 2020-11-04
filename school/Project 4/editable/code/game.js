@@ -201,7 +201,7 @@ Orb.prototype.type = "orb";
 //Tells the code how to place the potion in the level and how big it should be
 function Potion(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
-  this.size = new Vector(0.6, 0.6);
+  this.size = new Vector(0.8, 0.8);
   
   this.wobble = Math.random() * Math.PI * 2;
 }
@@ -217,7 +217,7 @@ Potion.prototype.type = "potion";
 //Tells the code how to place the health potions in the level and how big it should be
 function Health(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
-  this.size = new Vector(0.6, 0.6);
+  this.size = new Vector(0.8, 0.8);
   
   this.wobble = Math.random() * Math.PI * 2;
 }
@@ -234,7 +234,7 @@ Health.prototype.type = "health";
 //Tells the code how to place the health potions in the level and how big it should be
 function Bounce(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
-  this.size = new Vector(0.5,0.5);
+  this.size = new Vector(0.8,0.8);
   
   this.wobble = Math.random() * Math.PI * 2;
 }

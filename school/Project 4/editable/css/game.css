@@ -9,7 +9,7 @@
 }
 
 .lava { 
-  background-image: url(lava.jpg);
+  background-image: url(lava2.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
 }
@@ -38,7 +38,7 @@
 }
 
 .bounce {
-  background-image: url(purplePotion.png);
+  background-image: url(purplePotion3.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   }
@@ -62,7 +62,7 @@
 
 .health {
   background-image: url(healthPotion.png);
-  background-size: 125% 125%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;}
 
 
