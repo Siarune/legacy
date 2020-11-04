@@ -1,0 +1,78 @@
+.background    { 
+  background: gray;
+  table-layout: fixed;
+  border-spacing: 0;   
+}
+
+.background td { 
+  padding: 0;
+}
+
+.lava { 
+  background: crimson;
+}
+
+.ice { 
+  background: aqua; 
+}
+
+.wall { 
+  background: white;   
+}
+
+.actor  { 
+  position: absolute;  
+}
+
+.player { 
+  background-image: url(jim_2.jpg);
+	background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.floater { 
+  background: black;   
+}
+.bounce {
+  background: darkgray;
+}
+
+.coin { 
+  background: gold; 
+}
+
+.orb { 
+  background: goldenrod;
+}
+
+.potion {
+  background: darkgreen;
+}
+
+.health {
+  background: darkblue;
+}
+
+.key {
+  background: brown;
+}
+
+.door {
+  background: darkgreen;
+}
+
+.game {
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 450px;
+  position: relative;
+}
+
+.lost .player {
+  background-image: url(jim_2.jpg);
+}
+
+.won .player {
+  background-image: url(jim_2.jpg);
+}
+
