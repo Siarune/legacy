@@ -36,30 +36,32 @@
 .floater { 
   background: black;   
 }
+
 .bounce {
-  background-image: url(random.png);
+  background-image: url(purplePotion.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   }
 
 .coin { 
-  background-image: url(coin.png);
+  background-image: url(coin4.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   }
 
 .orb { 
-  background: goldenrod;
-}
+  background-image: url(coin4.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;}
 
 .potion {
-  background-image: url(gravity.png);
+  background-image: url(greenPotion.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   }
 
 .health {
-  background-image: url(variation.png);
+  background-image: url(healthPotion.png);
   background-size: 125% 125%;
   background-repeat: no-repeat;}
 

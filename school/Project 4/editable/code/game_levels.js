@@ -181,11 +181,11 @@ var GAME_LEVELS = [
    "x           oo        oo      oooo         oo        oo             oo            oo            oo     oo      oo       oo      oooooooooo  x",
    "x            oo      oo     oo    oo       oo        oo              oo          oooo          oo      oo      ooo      oo       oooooooo   x",
    "x             oo    oo     oo      oo      oo        oo               oo        oo  oo        oo               oo oo    oo        oooooo    x",
-   "x      yyyyyyyyxxyyxxyyyyyxxyyyyyyyyxxyyyyyxxyyyyyyyyxxyyyyyyyyyyyyyyyyxxyyyyyyxxyyyyxxyyyyyyxxyyyyyyyyxxyyyyyyxxyyxxyyyxxyyyyyyyyyxxxxyyyyyx",
+   "x              oo  oo     oo        oo     oo        oo                oo      oo    oo      oo        oo      oo  oo   oo         oooo     x",
    "x               oooo      oo        oo     oo        oo                 oo    oo      oo    oo         oo      oo   oo  oo          oo      x",
    "x                oo        oo      oo      oo        oo                  oo  oo        oo  oo          oo      oo    oo oo                  x",
    "x               oo          oo    oo        oo      oo                    oooo          oooo           oo      oo     oooo          oo      x",
-   "xb     @       oo             oooo            oooooo                       oo            oo            oo      oo       oo          oo      x",
+   "x     @        oob            oooob           oooooob                      oob           oob           oob     oob      oob         oob     x",
    "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
    ],
    [
