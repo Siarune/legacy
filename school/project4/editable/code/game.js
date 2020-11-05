@@ -601,12 +601,12 @@ Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;
   if (keys.left) this.speed.x -= playerXSpeed;
   else if (level.status == "slow") this.speed.x -= 12 - playerXSpeed;
-  else if (level.status == "fast") this.speed.x += 8 + playerXSpeed;
+  else if (level.status == "fast") this.speed.x += 3 + playerXSpeed;
   else if (level.status == "bounce") this.speed.x -= 7 + playerXSpeed;
   else if (level.status == "reversed") this.speed.x -= 12 + playerXSpeed;
   if (keys.right) this.speed.x += playerXSpeed;
   else if (level.status == "slow") this.speed.x += 12 - playerXSpeed;
-  else if (level.status == "fast") this.speed.x -= 8 + playerXSpeed;
+  else if (level.status == "fast") this.speed.x -= 3 + playerXSpeed;
   else if (level.status == "bounce") this.speed.x += 7 + playerXSpeed;
   else if (level.status == "reversed") this.speed.x += 12 + playerXSpeed;
 
