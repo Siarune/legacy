@@ -601,17 +601,15 @@ Player.prototype.moveX = function(step, level, keys) {
   this.speed.x = 0;
   if (keys.left) this.speed.x -= playerXSpeed;
   else if (level.status == "slow") this.speed.x -= 12 - playerXSpeed;
-  else if (level.status == "fast") this.speed.x += 12 + playerXSpeed;
+  else if (level.status == "fast") this.speed.x += 8 + playerXSpeed;
   else if (level.status == "bounce") this.speed.x -= 7 + playerXSpeed;
   else if (level.status == "reversed") this.speed.x -= 12 + playerXSpeed;
   if (keys.right) this.speed.x += playerXSpeed;
   else if (level.status == "slow") this.speed.x += 12 - playerXSpeed;
-  else if (level.status == "fast") this.speed.x -= 12 + playerXSpeed;
+  else if (level.status == "fast") this.speed.x -= 8 + playerXSpeed;
   else if (level.status == "bounce") this.speed.x += 7 + playerXSpeed;
   else if (level.status == "reversed") this.speed.x += 12 + playerXSpeed;
 
-  //else if (level.status == "usd") gravity = -20;
-  //else if (level.status == "rsu") gravity = 20;
 
   var motion = new Vector(this.speed.x * step, 0);
  
@@ -754,8 +752,14 @@ Level.prototype.playerTouched = function(type, actor) {
 
 
     else if (type == "potion") {
-      var reversedTimer;
-    resersedTimer = setTimeout(function(){playerXSpeed=-10}, 1);
+
+    let Switch1 = setTimeout(function(){playerXSpeed=-10}, 1);
+    let Switch2 = setTimeout(function(){playerXSpeed=10}, 10000);
+    let Switch3 = setTimeout(function(){playerXSpeed=-10}, 20000);
+    let Switch4 = setTimeout(function(){playerXSpeed=10}, 30000);
+    let Switch5 = setTimeout(function(){playerXSpeed=-10}, 40000);
+    let Switch6 = setTimeout(function(){playerXSpeed=10}, 50000);
+
     this.actors = this.actors.filter(function(other) {
       return other != actor;
     });
@@ -790,6 +794,11 @@ Level.prototype.playerTouched = function(type, actor) {
     }
   }
 
+  else if (type == "coin" && this.status == "lost") {
+    this.status = "lost";
+    this.finishDelay = 1;
+  } 
+
   else if (type == "coin") {
     this.status = "fast";
     this.actors = this.actors.filter(function(other) {
@@ -811,7 +820,7 @@ Level.prototype.playerTouched = function(type, actor) {
 //tracks key press on keyboard
 //give the ASCII code a string we can use
 //gives the keys a varible name we can use
-var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "left",  68: "right"/*, 188: "up", 69: "right"*/};
+var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "left",  68: "right"};
 
 //DO NOT MESS WITH THIS!
 
