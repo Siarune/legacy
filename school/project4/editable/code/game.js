@@ -811,7 +811,7 @@ Level.prototype.playerTouched = function(type, actor) {
 //tracks key press on keyboard
 //give the ASCII code a string we can use
 //gives the keys a varible name we can use
-var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "left", 68: "right", 188: "up", 69: "right"};
+var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "left",  68: "right"/*, 188: "up", 69: "right"*/};
 
 //DO NOT MESS WITH THIS!
 
