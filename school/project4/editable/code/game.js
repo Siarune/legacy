@@ -24,7 +24,9 @@ var actorChars = {
   "o": Coin, 
   "=": Lava, "|": Lava, "v": Lava,  
   "T": Ice, "t": Ice, "Z": Ice,
-  "O": Orb, "p": Potion, "h": Health,
+  "O": Orb, 
+  "p": Potion, 
+  "h": Health,
   "b": Bounce
 };
 
@@ -752,13 +754,7 @@ Level.prototype.playerTouched = function(type, actor) {
 
 
     else if (type == "potion") {
-
-    let Switch1 = setTimeout(function(){playerXSpeed=-10}, 1);
-    let Switch2 = setTimeout(function(){playerXSpeed=10}, 10000);
-    let Switch3 = setTimeout(function(){playerXSpeed=-10}, 20000);
-    let Switch4 = setTimeout(function(){playerXSpeed=10}, 30000);
-    let Switch5 = setTimeout(function(){playerXSpeed=-10}, 40000);
-    let Switch6 = setTimeout(function(){playerXSpeed=10}, 50000);
+    	playerXSpeed = -10;
 
     this.actors = this.actors.filter(function(other) {
       return other != actor;
