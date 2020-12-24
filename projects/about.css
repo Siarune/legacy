@@ -10,31 +10,20 @@ a {
     text-decoration: none;
     color: palegreen;
 }
-/*
-.cnt {
-    text-align: center;
+
+.badmove, .bio {
+    display: inline-block;
 }
-*/
+
 .badmove {
-    font-size: large;
-    width: auto;
-    height: auto;
     border: #d8bfd8 3px ridge;
     padding: 5px;
-    position: absolute;
-    top: 5%;
-    left: 5%;
+
 }
 
 .bio {
-    font-size: large;
-    width: 80%;
-    height: auto;
     border: #b69db6 2px solid;
     padding: 5px;
-    position: absolute;
-    top: 20%;
-    left: 10%;
 }
 
 .more {
