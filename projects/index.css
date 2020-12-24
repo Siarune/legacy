@@ -8,12 +8,12 @@ a {
 
 .thumbnail {
     height: auto;
-    min-height: 320px;
+    min-height: 330px;
     border: thin gray outset;
 }
 
 .thumbnail:hover {
-    background: rgba(0,0,0,0.1);
+    background-color: rgba(0,0,0,0.1);
 }
 
 .text_column p {
