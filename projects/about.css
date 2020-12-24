@@ -1,17 +1,79 @@
 @charset "utf-8";
 
 body {
-    background-color: #252525;
+    background-color: #202025;
     color: whitesmoke;
     font-family: "anonymous-pro";
 }
 
+a {
+    text-decoration: none;
+    color: palegreen;
+}
+/*
+.cnt {
+    text-align: center;
+}
+*/
 .badmove {
     font-size: large;
-    width: 60%;
+    width: auto;
     height: auto;
-    border: palegoldenrod 2px solid;
+    border: #d8bfd8 3px ridge;
     padding: 5px;
-    position: relative;
-    top: 25px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.bio {
+    font-size: large;
+    width: 80%;
+    height: auto;
+    border: #b69db6 2px solid;
+    padding: 5px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.more {
+    font-size: larger;
+    border: goldenrod 2px solid;
+    padding: 5px;
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 10px;
+}
+
+.mygit {
+    text-align: right;
+    border: lightsteelblue 2px solid;
+    width: 40%;
+    padding: 5px;
+    padding-right: 10px;
+    position: absolute;
+    top: 60%;
+    right:10px;
+}
+
+.scanjob {
+    border: palevioletred 2px solid;
+    padding: 5px;
+    width: 40%;
+    position: absolute;
+    top: 80%;
+    left: 10px;
+}
+
+.cont {
+    text-align: right;
+    border: lightcoral 2px solid;
+    width: 40%;
+    padding: 5px;
+    padding-right: 10px;
+    position: absolute;
+    top: 100%;
+    right:10px;
 }
