@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Russian Roulette</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://use.typekit.net/piz3lqf.css">
+</head>
+<style type="text/css">
+body {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    height: 250px;
+    width: 250px;
+    background-color: darkred;
+    border-radius: 100%;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-size: 30px;
+    color: white;
+    font-family: archivo-black, sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<body id="body">
+    <center>
+        <h1>Pull the Trigger</h1>
+    </center>
+    <button id="button">PULL</button>
+    <script type="text/javascript">
+    function init() {
+        var button = document.getElementById('button');
+        button.onclick = pullTrigger;
+    }
+
+    function pullTrigger() {
+        console.log("pulled");
+        const clip = [1, 2, 3, 4, 5, 6];
+        var shot = clip[Math.floor(Math.random() * clip.length)];
+
+        if (shot > 5) {
+            console.log("hit");
+            setTimeout(() => { document.getElementById("body").style.background = "red"; }, 0);
+            setTimeout(() => { document.getElementById("button").style.pointerEvents = "none" }, 0);
+            setTimeout(() => { alert("you ded"); }, 5);
+            setTimeout(() => { document.getElementById("body").style.background = "black"; }, 2000);
+            setTimeout(() => { document.getElementById("button").style.pointerEvents = "all" }, 2000);
+        }
+    }
+
+    window.onload = init;
+    </script>
+</body>
+
+</html>
