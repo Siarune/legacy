@@ -54,22 +54,13 @@ a {
     right:10px;
 }
 
-.scanjob {
-    border: palevioletred 2px solid;
-    padding: 5px;
-    width: 40%;
-    position: absolute;
-    top: 90%;
-    left: 10px;
-}
-
 .cont {
-    text-align: right;
+    text-align: left;
     border: lightcoral 2px solid;
     width: 40%;
     padding: 5px;
     padding-right: 10px;
     position: absolute;
     top: 110%;
-    right:10px;
+    left:10px;
 }
