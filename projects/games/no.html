@@ -6795,7 +6795,8 @@
             }
 
             .icon {
-                -webkit-user-select: none
+                -webkit-user-select: none;
+                user-select: none;
             }
 
             .icon-generic {
@@ -6814,12 +6815,12 @@
             }
 
             #content-top {
-                margin: 20px
+                margin: 20px;
             }
 
             #help-box-outer {
-                -webkit-transition: height ease-in 218ms;
-                overflow: hidden
+                transition: height ease-in 218ms;
+                overflow: hidden;
             }
 
             #help-box-inner {
@@ -6831,25 +6832,25 @@
             }
 
             #suggestion {
-                margin-top: 15px
+                margin-top: 15px;
             }
 
             #short-suggestion {
-                margin-top: 5px
+                margin-top: 5px;
             }
 
             #sub-frame-error-details {
                 color: #8f8f8f;
-                text-shadow: 0 1px 0 rgba(255,255,255,.3)
+                text-shadow: 0 1px 0 rgba(255,255,255,.3);
             }
 
             [jscontent="failedUrl"] {
-                overflow-wrap: break-word
+                overflow-wrap: break-word;
             }
 
             #search-container {
                 display: flex;
-                margin-top: 20px
+                margin-top: 20px;
             }
 
             #search-box {
@@ -6947,11 +6948,14 @@
 
             #sub-frame-error {
                 -webkit-align-items: center;
+                align-items: center;
                 background-color: #ddd;
                 display: -webkit-flex;
                 -webkit-flex-flow: column;
+                flex-flow: column;
                 height: 100%;
                 -webkit-justify-content: center;
+                justify-content: center;
                 left: 0;
                 position: absolute;
                 top: 0;
