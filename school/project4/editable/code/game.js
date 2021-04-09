@@ -1,4 +1,3 @@
-
 //Use ctrl F  to search
 
 //makes the symbols that can be used to design the level
@@ -21,11 +20,15 @@
 //b switches the gravity
 var actorChars = {
   "@": Player,
-  "o": Coin, 
-  "=": Lava, "|": Lava, "v": Lava,  
-  "T": Ice, "t": Ice, "Z": Ice,
-  "O": Orb, 
-  "p": Potion, 
+  "o": Coin,
+  "=": Lava,
+  "|": Lava,
+  "v": Lava,
+  "T": Ice,
+  "t": Ice,
+  "Z": Ice,
+  "O": Orb,
+  "p": Potion,
   "h": Health,
   "b": Bounce
 };
@@ -48,17 +51,19 @@ function Level(plan) {
 
 
   for (var y = 0; y < this.height; y++) {
-    var line = plan[y], gridLine = [];
+    var line = plan[y],
+      gridLine = [];
 
-  
+
     for (var x = 0; x < this.width; x++) {
 
 
-      var ch = line[x], fieldType = null;
+      var ch = line[x],
+        fieldType = null;
       var Actor = actorChars[ch];
 
       if (Actor)
-       
+
         this.actors.push(new Actor(new Vector(x, y), ch));
 
       //makes a field type for a wall using char x
@@ -68,17 +73,17 @@ function Level(plan) {
       //makes a field type for a block of lava using char !
       else if (ch == "!")
         fieldType = "lava";
-        
+
       //makes a field type for a floater using char y
       //floaters are like walls, but can float in mid air
       else if (ch == "y")
         fieldType = "floater";
 
-       //makes a field type for a coin using char o
+      //makes a field type for a coin using char o
       else if (ch == "o")
         fieldType = "coin";
-        
-        //makes a field type for a block of ice using char i
+
+      //makes a field type for a block of ice using char i
       else if (ch == "i")
         fieldType = "ice"
 
@@ -97,16 +102,16 @@ function Level(plan) {
       //makes a field type for a bouncer using char _
       else if (ch == "b")
         fieldType = "bounce";
-      
-   
+
+
       gridLine.push(fieldType);
     }
 
     this.grid.push(gridLine);
   }
 
-   
-  this.player = this.actors.filter(function(actor) {
+
+  this.player = this.actors.filter(function (actor) {
     return actor.type == "player";
   })[0];
 }
@@ -117,7 +122,7 @@ function Level(plan) {
 //This is not a function, it adds infromation to the Level Function
 //.prototype always adds info to an existing function
 //specificaly this adds code that handles the level ending?
-Level.prototype.isFinished = function() {
+Level.prototype.isFinished = function () {
   return this.status != null && this.finishDelay < 0;
 };
 
@@ -127,14 +132,15 @@ Level.prototype.isFinished = function() {
 //makes a grid for the code to understand so we can move the character and actors
 //This also will help us make gravity work later
 function Vector(x, y) {
-  this.x = x; this.y = y;
+  this.x = x;
+  this.y = y;
 }
 
 
 //This is a method, it adds information to the Vector Function
 //.prototype always adds info to an existing function 
 //makes the x-axis movement possible
-Vector.prototype.plus = function(other) {
+Vector.prototype.plus = function (other) {
   return new Vector(this.x + other.x, this.y + other.y);
 };
 
@@ -142,7 +148,7 @@ Vector.prototype.plus = function(other) {
 //This is a method, it adds information to the Vector Function
 //.prototype always adds info to an existing function
 //makes the y-axis movement possible
-Vector.prototype.times = function(factor) {
+Vector.prototype.times = function (factor) {
   return new Vector(this.x * factor, this.y * factor);
 };
 
@@ -171,7 +177,7 @@ Player.prototype.type = "player";
 function Coin(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(0.6, 0.6);
-  
+
   this.wobble = Math.random() * Math.PI * 2;
 }
 //This is not a function, it adds information to the function Coin
@@ -188,7 +194,7 @@ Coin.prototype.type = "coin";
 function Orb(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(0.6, 0.6);
-  
+
   this.wobble = Math.random() * Math.PI * 2;
 }
 //This is not a function, it adds information to the function Orb
@@ -204,7 +210,7 @@ Orb.prototype.type = "orb";
 function Potion(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(0.8, 0.8);
-  
+
   this.wobble = Math.random() * Math.PI * 2;
 }
 //This is not a function, it adds information to the function Potion
@@ -220,7 +226,7 @@ Potion.prototype.type = "potion";
 function Health(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
   this.size = new Vector(0.8, 0.8);
-  
+
   this.wobble = Math.random() * Math.PI * 2;
 }
 //This is not a function, it adds information to the function Health
@@ -236,8 +242,8 @@ Health.prototype.type = "health";
 //Tells the code how to place the health potions in the level and how big it should be
 function Bounce(pos) {
   this.basePos = this.pos = pos.plus(new Vector(0.2, 0.1));
-  this.size = new Vector(0.8,0.8);
-  
+  this.size = new Vector(0.8, 0.8);
+
   this.wobble = Math.random() * Math.PI * 2;
 }
 //This is not a function, it adds information to the function Health
@@ -256,13 +262,13 @@ function Lava(pos, ch) {
   this.pos = pos;
   this.size = new Vector(1, 1);
   if (ch == "=") {
-  
+
     this.speed = new Vector(2, 0);
   } else if (ch == "|") {
 
     this.speed = new Vector(0, 2);
   } else if (ch == "v") {
-   
+
     this.speed = new Vector(0, 3);
     this.repeatPos = pos;
   }
@@ -279,16 +285,16 @@ Lava.prototype.type = "lava";
 //handles where to place the ice and its size on the screen
 //tells the ice if it moves and what direction it moves
 function Ice(pos, ch) {
-this.pos = pos;
-   this.size = new Vector(1, 1);
+  this.pos = pos;
+  this.size = new Vector(1, 1);
   if (ch == "Z") {
-  
+
     this.speed = new Vector(2, 0);
   } else if (ch == "t") {
 
     this.speed = new Vector(0, 2);
   } else if (ch == "T") {
-   
+
     this.speed = new Vector(0, 3);
     this.repeatPos = pos;
   }
@@ -327,7 +333,7 @@ function DOMDisplay(parent, level) {
 
   this.actorLayer = null;
 
-  
+
   this.drawFrame();
 }
 
@@ -337,15 +343,15 @@ var scale = 20;
 //makes the camera  and lvl work
 //specificaly this draws the lvl layout
 //DO NOT MEES WITH THIS!
-DOMDisplay.prototype.drawBackground = function() {
+DOMDisplay.prototype.drawBackground = function () {
   var table = elt("table", "background");
   table.style.width = this.level.width * scale + "px";
 
 
-  this.level.grid.forEach(function(row) {
+  this.level.grid.forEach(function (row) {
     var rowElt = table.appendChild(elt("tr"));
     rowElt.style.height = scale + "px";
-    row.forEach(function(type) {
+    row.forEach(function (type) {
       rowElt.appendChild(elt("td", type));
     });
   });
@@ -357,14 +363,14 @@ DOMDisplay.prototype.drawBackground = function() {
 //makes the camera  and lvl work
 //specificaly this draws actors
 //DO NOT MEES WITH THIS!
-DOMDisplay.prototype.drawActors = function() {
+DOMDisplay.prototype.drawActors = function () {
 
   var wrap = elt("div");
 
 
-  this.level.actors.forEach(function(actor) {
+  this.level.actors.forEach(function (actor) {
     var rect = wrap.appendChild(elt("div",
-                                    "actor " + actor.type));
+      "actor " + actor.type));
     rect.style.width = actor.size.x * scale + "px";
     rect.style.height = actor.size.y * scale + "px";
     rect.style.left = actor.pos.x * scale + "px";
@@ -377,7 +383,7 @@ DOMDisplay.prototype.drawActors = function() {
 //makes the camera  and lvl work
 //specificaly this re-draws the lvl layout every frame
 //DO NOT MEES WITH THIS!
-DOMDisplay.prototype.drawFrame = function() {
+DOMDisplay.prototype.drawFrame = function () {
   if (this.actorLayer)
     this.wrap.removeChild(this.actorLayer);
   this.actorLayer = this.wrap.appendChild(this.drawActors());
@@ -390,7 +396,7 @@ DOMDisplay.prototype.drawFrame = function() {
 //makes the camera  and lvl work
 //specificaly this has the camera move when needed
 //DO NOT MEES WITH THIS!
-DOMDisplay.prototype.scrollPlayerIntoView = function() {
+DOMDisplay.prototype.scrollPlayerIntoView = function () {
   var width = this.wrap.clientWidth;
   var height = this.wrap.clientHeight;
 
@@ -398,13 +404,15 @@ DOMDisplay.prototype.scrollPlayerIntoView = function() {
   var margin = width / 3;
 
 
-  var left = this.wrap.scrollLeft, right = left + width;
-  var top = this.wrap.scrollTop, bottom = top + height;
+  var left = this.wrap.scrollLeft,
+    right = left + width;
+  var top = this.wrap.scrollTop,
+    bottom = top + height;
 
   var player = this.level.player;
- 
+
   var center = player.pos.plus(player.size.times(0.5))
-                 .times(scale);
+    .times(scale);
 
   if (center.x < left + margin)
     this.wrap.scrollLeft = center.x - margin;
@@ -420,7 +428,7 @@ DOMDisplay.prototype.scrollPlayerIntoView = function() {
 //makes the camera  and lvl work
 //specificaly this clears the previous frame
 //DO NOT MEES WITH THIS!
-DOMDisplay.prototype.clear = function() {
+DOMDisplay.prototype.clear = function () {
   this.wrap.parentNode.removeChild(this.wrap);
 };
 
@@ -430,7 +438,7 @@ DOMDisplay.prototype.clear = function() {
 //This is not a method, it adds information to the Level Function
 //.prototype always adds info to an existing function
 //makes the far side of the screen kill, the player, if they manage to get out of the level
-Level.prototype.obstacleAt = function(pos, size) {
+Level.prototype.obstacleAt = function (pos, size) {
 
   var xStart = Math.floor(pos.x);
 
@@ -461,17 +469,17 @@ Level.prototype.obstacleAt = function(pos, size) {
 //This is a method, it adds information to the Level Function
 //.prototype always adds info to an existing function
 //this helps control movement of an actor
-Level.prototype.actorAt = function(actor) {
- 
+Level.prototype.actorAt = function (actor) {
+
   for (var i = 0; i < this.actors.length; i++) {
     var other = this.actors[i];
-  
+
     if (other != actor &&
-        actor.pos.x + actor.size.x > other.pos.x &&
-        actor.pos.x < other.pos.x + other.size.x &&
-        actor.pos.y + actor.size.y > other.pos.y &&
-        actor.pos.y < other.pos.y + other.size.y)
-   
+      actor.pos.x + actor.size.x > other.pos.x &&
+      actor.pos.x < other.pos.x + other.size.x &&
+      actor.pos.y + actor.size.y > other.pos.y &&
+      actor.pos.y < other.pos.y + other.size.y)
+
       return other;
   }
 };
@@ -480,19 +488,19 @@ Level.prototype.actorAt = function(actor) {
 //This is a method, it adds information to the Level Function
 //.prototype always adds info to an existing function
 //the master controler for animating the objects in the level
-Level.prototype.animate = function(step, keys) {
+Level.prototype.animate = function (step, keys) {
 
   if (this.status != null)
     this.finishDelay -= step;
 
- 
+
   while (step > 0) {
     var thisStep = Math.min(step, maxStep);
-    this.actors.forEach(function(actor) {
- 
+    this.actors.forEach(function (actor) {
+
       actor.act(thisStep, this, keys);
     }, this);
- 
+
     step -= thisStep;
   }
 };
@@ -504,10 +512,10 @@ var wobbleDist = 0.07;
 //This is a method, it adds information to the Coin Function
 //.prototype always adds info to an existing function
 //this adds wobble to the coins
-Coin.prototype.act = function(step) {
-this.wobble += step * wobbleSpeed;
-var wobblePos = Math.sin(this.wobble) * wobbleDist;
-this.pos = this.basePos.plus(new Vector(0, wobblePos));
+Coin.prototype.act = function (step) {
+  this.wobble += step * wobbleSpeed;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 var wobbleSpeed1 = 30;
 var wobbleDist1 = 0.07;
@@ -516,10 +524,10 @@ var wobbleDist1 = 0.07;
 //This is a method, it adds information to the Orb Function
 //.prototype always adds info to an existing function
 //this adds wobble to the orbs
-Orb.prototype.act = function(step) {
-this.wobble += step * wobbleSpeed1;
-var wobblePos = Math.sin(this.wobble) * wobbleDist1;
-this.pos = this.basePos.plus(new Vector(0, wobblePos));
+Orb.prototype.act = function (step) {
+  this.wobble += step * wobbleSpeed1;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist1;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 var wobbleSpeed2 = 8;
 var wobbleDist2 = 0.07;
@@ -528,10 +536,10 @@ var wobbleDist2 = 0.07;
 //This is a method, it adds information to the Potion Function
 //.prototype always adds info to an existing function
 //this adds wobble to the potions
-Potion.prototype.act = function(step) {
-this.wobble += step * wobbleSpeed3;
-var wobblePos = Math.sin(this.wobble) * wobbleDist3;
-this.pos = this.basePos.plus(new Vector(0, wobblePos));
+Potion.prototype.act = function (step) {
+  this.wobble += step * wobbleSpeed3;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist3;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 var wobbleSpeed3 = 50;
 var wobbleDist3 = 0.1;
@@ -540,10 +548,10 @@ var wobbleDist3 = 0.1;
 //This is a method, it adds information to the Health Function
 //.prototype always adds info to an existing function
 //this adds wobble to the health
-Health.prototype.act = function(step) {
-this.wobble += step * wobbleSpeed4;
-var wobblePos = Math.sin(this.wobble) * wobbleDist4;
-this.pos = this.basePos.plus(new Vector(0, wobblePos));
+Health.prototype.act = function (step) {
+  this.wobble += step * wobbleSpeed4;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist4;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 var wobbleSpeed4 = 15;
 var wobbleDist4 = 0.2;
@@ -552,10 +560,10 @@ var wobbleDist4 = 0.2;
 //This is a method, it adds information to the Health Function
 //.prototype always adds info to an existing function
 //this adds wobble to the health
-Bounce.prototype.act = function(step) {
-this.wobble += step * wobbleSpeed5;
-var wobblePos = Math.sin(this.wobble) * wobbleDist5;
-this.pos = this.basePos.plus(new Vector(0, wobblePos));
+Bounce.prototype.act = function (step) {
+  this.wobble += step * wobbleSpeed5;
+  var wobblePos = Math.sin(this.wobble) * wobbleDist5;
+  this.pos = this.basePos.plus(new Vector(0, wobblePos));
 };
 var wobbleSpeed5 = 1;
 var wobbleDist5 = 0.1;
@@ -564,8 +572,8 @@ var wobbleDist5 = 0.1;
 //This is a method, it adds information to the Ice Function
 //.prototype always adds info to an existing function
 //this moves the ice
-Ice.prototype.act = function(step, level) {
-var newPos = this.pos.plus(this.speed.times(step));
+Ice.prototype.act = function (step, level) {
+  var newPos = this.pos.plus(this.speed.times(step));
   if (!level.obstacleAt(newPos, this.size))
     this.pos = newPos;
   else if (this.repeatPos)
@@ -578,13 +586,13 @@ var newPos = this.pos.plus(this.speed.times(step));
 //This is a method, it adds information to the Lava Function
 //.prototype always adds info to an existing function
 //this moves the lava
-Lava.prototype.act = function(step, level) {
+Lava.prototype.act = function (step, level) {
   var newPos = this.pos.plus(this.speed.times(step));
   if (!level.obstacleAt(newPos, this.size))
     this.pos = newPos;
   else if (this.repeatPos)
     this.pos = this.repeatPos;
-  else 
+  else
     this.speed = this.speed.times(-1);
 };
 
@@ -595,11 +603,11 @@ var playerXSpeed = 7;
 
 
 //This is a method, it adds information to the Player Function
- //method = function inside a function
+//method = function inside a function
 //.prototype always adds info to an existing function
 //makes the right and left keys on the keyboard move player
 //also makes status effects for the player, when it touches something
-Player.prototype.moveX = function(step, level, keys) {
+Player.prototype.moveX = function (step, level, keys) {
   this.speed.x = 0;
   if (keys.left) this.speed.x -= playerXSpeed;
   else if (level.status == "slow") this.speed.x -= 12 - playerXSpeed;
@@ -614,7 +622,7 @@ Player.prototype.moveX = function(step, level, keys) {
 
 
   var motion = new Vector(this.speed.x * step, 0);
- 
+
   var newPos = this.pos.plus(motion);
 
   var obstacle = level.obstacleAt(newPos, this.size);
@@ -635,21 +643,21 @@ var jumpSpeed = 12;
 
 
 //This is a method, it adds information to the Player Function
- //method = function inside a function
+//method = function inside a function
 //.prototype always adds info to an existing function
 //makes the up key on the keyboard move the player
 
 
-Player.prototype.moveY = function(step, level, keys) {
- 
- //handles gravity
+Player.prototype.moveY = function (step, level, keys) {
+
+  //handles gravity
   this.speed.y += step * gravity;
   var motion = new Vector(0, this.speed.y * step);
   var newPos = this.pos.plus(motion);
   var obstacle = level.obstacleAt(newPos, this.size);
 
-//handles jump speed
-//player must be touching ground to jump
+  //handles jump speed
+  //player must be touching ground to jump
   if (obstacle) {
     level.playerTouched(obstacle);
     if (keys.up && this.speed.y > 0)
@@ -664,10 +672,10 @@ Player.prototype.moveY = function(step, level, keys) {
 
 
 //This is a method, it adds information to the Player Function
- //method = function inside a function
+//method = function inside a function
 //.prototype always adds info to an existing function
 //this helps moves the player when the keys are pressed
-Player.prototype.act = function(step, level, keys) {
+Player.prototype.act = function (step, level, keys) {
   this.moveX(step, level, keys);
   this.moveY(step, level, keys);
 
@@ -686,124 +694,85 @@ Player.prototype.act = function(step, level, keys) {
 
 
 //This is a method, it adds information to the Level Function
- //method = function inside a function
+//method = function inside a function
 //.prototype always adds info to an existing function
 //specificaly this handles what status the player gets when the player touches objects
 
-Level.prototype.playerTouched = function(type, actor) {
+Level.prototype.playerTouched = function (type, actor) {
 
- 
- if (type == "ice" && this.status == null) {
+
+  if (type == "ice" && this.status == null) {
     this.status = "slow";
-  } 
-
-  else if (type == "ice" && this.status == "fast") {
+  } else if (type == "ice" && this.status == "fast") {
     this.status = null;
-  }
-
-  else if (type == "ice" && this.status == "slow") {
+  } else if (type == "ice" && this.status == "slow") {
     this.status = "bounce";
-  }  
-
-  else if (type == "ice" && this.status == "normal") {
+  } else if (type == "ice" && this.status == "normal") {
     this.status = "bounce";
-  }
-
-  else if (type == "ice" && this.status == "reversed") {
+  } else if (type == "ice" && this.status == "reversed") {
     this.status = "bounce";
-  }
-
-
-
-  else if (type == "wall" && this.status == "bounce") {
+  } else if (type == "wall" && this.status == "bounce") {
     this.status = "slow";
-  }
-
-  else if (type == "floater" && this.status == "bounce") {
+  } else if (type == "floater" && this.status == "bounce") {
     this.status = "slow";
-  }
-
-
-
-  else if (type == "lava" && this.status == "bounce") {
+  } else if (type == "lava" && this.status == "bounce") {
     this.status = "lost";
     this.finishDelay = 1;
-  } 
-
-  else if (type == "lava" && this.status == "slow") {
+  } else if (type == "lava" && this.status == "slow") {
     this.status = "lost";
     this.finishDelay = 1;
-  } 
-
-  else if (type == "lava" && this.status == "fast") {
+  } else if (type == "lava" && this.status == "fast") {
     this.status = "lost";
     this.finishDelay = 1;
-  }
-
-  else if (type == "lava" && this.status == null) {
+  } else if (type == "lava" && this.status == null) {
     this.status = "lost";
     this.finishDelay = 1;
-  } 
-
-
-
-  else if (type == "orb") {
+  } else if (type == "orb") {
     this.status = "lost";
     this.finishDelay = 1;
-  }
+  } else if (type == "potion") {
+    playerXSpeed = -10;
 
-
-    else if (type == "potion") {
-    	playerXSpeed = -10;
-
-    this.actors = this.actors.filter(function(other) {
+    this.actors = this.actors.filter(function (other) {
       return other != actor;
     });
-    if (!this.actors.some(function(actor) {
-           return actor.type == "potion";
-         })) {
-    }
+    if (!this.actors.some(function (actor) {
+        return actor.type == "potion";
+      })) {}
   }
 
 
-     if (type == "bounce") {
-      let bounceTimer = setTimeout(function(){
-        gravity=-20
-      }, 1);
+  if (type == "bounce") {
+    let bounceTimer = setTimeout(function () {
+      gravity = -20
+    }, 1);
 
-      let backToNormal = setTimeout(function(){
-        gravity=20
-      }, 2000);
-    }
-
-
-    else if (type == "health") {
-      playerXSpeed = 7;
-      this.status = null;
-    this.actors = this.actors.filter(function(other) {
+    let backToNormal = setTimeout(function () {
+      gravity = 20
+    }, 2000);
+  } else if (type == "health") {
+    playerXSpeed = 7;
+    this.status = null;
+    this.actors = this.actors.filter(function (other) {
       return other != actor;
     });
-    if (!this.actors.some(function(actor) {
-           return actor.type == "health";
-         })) {
+    if (!this.actors.some(function (actor) {
+        return actor.type == "health";
+      })) {
       this.status = null;
     }
-  }
-
-  else if (type == "coin" && this.status == "lost") {
+  } else if (type == "coin" && this.status == "lost") {
     this.status = "lost";
     this.finishDelay = 1;
-  } 
-
-  else if (type == "coin") {
+  } else if (type == "coin") {
     this.status = "fast";
-    this.actors = this.actors.filter(function(other) {
+    this.actors = this.actors.filter(function (other) {
       return other != actor;
     });
 
-    if (!this.actors.some(function(actor) {
-           return actor.type == "coin";
-         })) {
+    if (!this.actors.some(function (actor) {
+        return actor.type == "coin";
+      })) {
       this.status = "won";
       this.finishDelay = 1;
     }
@@ -816,7 +785,15 @@ Level.prototype.playerTouched = function(type, actor) {
 //tracks key press on keyboard
 //give the ASCII code a string we can use
 //gives the keys a varible name we can use
-var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "left",  68: "right"};
+var arrowCodes = {
+  37: "left",
+  38: "up",
+  39: "right",
+  87: "up",
+  32: "up",
+  65: "left",
+  68: "right"
+};
 
 //DO NOT MESS WITH THIS!
 
@@ -825,7 +802,7 @@ var arrowCodes = {37: "left", 38: "up", 39: "right", 87: "up", 32: "up", 65: "le
 function trackKeys(codes) {
   var pressed = Object.create(null);
 
-  
+
   // it is called by the trackKeys function
   //This is actually a method
   //method = function inside a function
@@ -836,13 +813,13 @@ function trackKeys(codes) {
 
       var down = event.type == "keydown";
       pressed[codes[event.keyCode]] = down;
-  
+
       event.preventDefault();
     }
   }
- 
 
-   //DO NOT MESS WITH THIS!
+
+  //DO NOT MESS WITH THIS!
   //listens for key press
   //calls function handler if key is pressed
   addEventListener("keydown", handler);
@@ -857,14 +834,14 @@ function trackKeys(codes) {
 //DO NOT MESS WITH THIS!
 function runAnimation(frameFunc) {
   var lastTime = null;
-  
+
   //This is actually a method
   //method = function inside a function
   //deals with each frame of animation
   function frame(time) {
     var stop = false;
     if (lastTime != null) {
-    
+
       var timeStep = Math.min(time - lastTime, 100) / 1000;
       stop = frameFunc(timeStep) === false;
     }
@@ -887,8 +864,8 @@ var arrows = trackKeys(arrowCodes);
 function runLevel(level, Display, andThen) {
   var display = new Display(document.body, level);
 
-  runAnimation(function(step) {
-    
+  runAnimation(function (step) {
+
     level.animate(step, arrows);
     display.drawFrame(step);
     if (level.isFinished()) {
@@ -911,10 +888,10 @@ function runGame(plans, Display) {
   //starts the level
   function startLevel(n) {
 
-    runLevel(new Level(plans[n]), Display, function(status) {
+    runLevel(new Level(plans[n]), Display, function (status) {
       if (status == "lost")
         startLevel(n);
-     
+
       else if (n < plans.length - 1)
         startLevel(n + 1);
       else
