@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snek</title>
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  canvas {
+    border: 1px solid blue;
+  }
+  </style>
+  <link href="../../css/bb.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<a id="back" href="../"><img src="../../img/back.png" width="48px" style="background-color:darkslategray; border-radius: 90%"></a>
+<canvas width="800" height="600" id="game"></canvas>
+<script>
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+var grid = 20;
+var count = 5;
+  
+var snake = {
+  x: 160,
+  y: 160,
+  
+  // snake velocity. moves one grid length every frame in either the x or y direction
+  dx: grid,
+  dy: 0,
+  
+  // keep track of all grids the snake body occupies
+  cells: [],
+  
+  // length of the snake. grows when eating an apple
+  maxCells: 4
+};
+var apple = {
+  x: 320,
+  y: 320
+};
+// get random whole numbers in a specific range
+// @see https://stackoverflow.com/a/1527820/2124254
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+// game loop
+function loop() {
+  requestAnimationFrame(loop);
+  // slow game loop to 15 fps instead of 60 (60/15 = 4)
+  if (++count < 4) {
+    return;
+  }
+  count = 0;
+  context.clearRect(0,0,canvas.width,canvas.height);
+  // move snake by it's velocity
+  snake.x += snake.dx;
+  snake.y += snake.dy;
+  // wrap snake position horizontally on edge of screen
+  if (snake.x < 0) {
+    snake.x = canvas.width - grid;
+  }
+  else if (snake.x >= canvas.width) {
+    snake.x = 0;
+  }
+  
+  // wrap snake position vertically on edge of screen
+  if (snake.y < 0) {
+    snake.y = canvas.height - grid;
+  }
+  else if (snake.y >= canvas.height) {
+    snake.y = 0;
+  }
+  // keep track of where snake has been. front of the array is always the head
+  snake.cells.unshift({x: snake.x, y: snake.y});
+  // remove cells as we move away from them
+  if (snake.cells.length > snake.maxCells) {
+    snake.cells.pop();
+  }
+  // draw apple
+  context.fillStyle = 'red';
+  context.fillRect(apple.x, apple.y, grid-1, grid-1);
+  // draw snake one cell at a time
+  context.fillStyle = 'green';
+  snake.cells.forEach(function(cell, index) {
+    
+    // drawing 1 px smaller than the grid creates a grid effect in the snake body so you can see how long it is
+    context.fillRect(cell.x, cell.y, grid-1, grid-1);  
+    // snake ate apple
+    if (cell.x === apple.x && cell.y === apple.y) {
+      snake.maxCells++;
+      // canvas is 400x400 which is 25x25 grids 
+      apple.x = getRandomInt(0, 25) * grid;
+      apple.y = getRandomInt(0, 25) * grid;
+    }
+    // check collision with all cells after this one (modified bubble sort)
+    for (var i = index + 1; i < snake.cells.length; i++) {
+      
+      // snake occupies same space as a body part. reset game
+      if (cell.x === snake.cells[i].x && cell.y === snake.cells[i].y) {
+        snake.x = 160;
+        snake.y = 160;
+        snake.cells = [];
+        snake.maxCells = 4;
+        snake.dx = grid;
+        snake.dy = 0;
+        apple.x = getRandomInt(0, 25) * grid;
+        apple.y = getRandomInt(0, 25) * grid;
+      }
+    }
+  });
+}
+// listen to keyboard events to move the snake
+document.addEventListener('keydown', function(e) {
+  // prevent snake from backtracking on itself by checking that it's 
+  // not already moving on the same axis (pressing left while moving
+  // left won't do anything, and pressing right while moving left
+  // shouldn't let you collide with your own body)
+  
+  // left arrow key
+  if (e.which === 37 && snake.dx === 0) {
+    snake.dx = -grid;
+    snake.dy = 0;
+  }
+  // up arrow key
+  else if (e.which === 38 && snake.dy === 0) {
+    snake.dy = -grid;
+    snake.dx = 0;
+  }
+  // right arrow key
+  else if (e.which === 39 && snake.dx === 0) {
+    snake.dx = grid;
+    snake.dy = 0;
+  }
+  // down arrow key
+  else if (e.which === 40 && snake.dy === 0) {
+    snake.dy = grid;
+    snake.dx = 0;
+  }
+});
+// start the game
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Snekkkkk</title>
+
+<link rel="stylesheet" type="text/css" href="snake.css" media="screen"/>
+
+
+<style type="text/css">
+            @import url("https://fonts.googleapis.com/css?family=VT323");
+            
+            ::selection {color:#FFFFFF; background:transparent;}
+            ::-moz-selection {color:#FFFFFF; background:transparent;}
+            
+            
+</style>
+
+<body data-rsssl=1>
+	
+<header class="wrap">
+                <h1>Snake</h1>
+                <p class="score">Score: <span id="score_value">0</span></p>
+            </header>
+            <canvas class="wrap" id="snake" width="320" height="320" tabindex="1"></canvas>
+        
+            
+            <div id="gameover">
+                <h2>Game Over</h2>
+                <p>press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin a</p>
+                <a id="newgame_gameover">new game</a>
+                <a id="setting_gameover">settings</a>
+            </div>
+        
+            
+            <div id="setting">
+                <h2>Settings</h2>
+                
+                <a id="newgame_setting">new game</a>
+                
+                <p>Speed:
+                    <input id="speed1" type="radio" name="speed" value="120" checked/>
+                    <label for="speed1">Slow</label>
+                    <input id="speed2" type="radio" name="speed" value="75"/>
+                    <label for="speed2">Normal</label>
+                    <input id="speed3" type="radio" name="speed" value="35"/>
+                    <label for="speed3">Fast</label>
+                </p>
+                
+                <p>Wall:
+                    <input id="wallon" type="radio" name="wall" value="1" checked/>
+                    <label for="wallon">On</label>
+                    <input id="walloff" type="radio" name="wall" value="0"/>
+                    <label for="walloff">Off</label>
+                </p>
+
+            </div>
+        
+            
+            <div id="menu">
+                <h2>Snake</h2>
+
+                <a id="newgame_menu">new game</a>
+                <a id="setting_menu">settings</a>
+            </div>
+ Main Menu Screen -->
+
+  </script>
+	
+</body>

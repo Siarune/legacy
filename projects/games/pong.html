@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script type="application/javascript" src="https://rawgit.com/SMenigat/html5-pong/master/pong.js"></script>
+	<style>
+		body {
+			background-color: rgb(53, 53, 53);
+		}
+	</style>
+	<link href="../bb.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<a id="back" href="../"><img src="../back.png" width="48px" style="border-radius: 90%"></a>
+	<center>
+		<canvas id="gameCanvas" width="1000" height="800" tabindex="1"></canvas>
+	</center>
+	<script>
+		// initialize the game, giving it the id of the canvas we want to transform
+		var Game = new PongGame('gameCanvas');
+
+		// run the game with some options
+		Game.run({
+					difficulty: PongGame.aiDifficulty.easy,
+					names: {
+						Player1: 'Player'
+					},
+					colors: {
+						background: 'black',
+						bat: 'white',
+						ball: 'white',
+						scores: 'green'
+					},
+					controls: {
+						Player1: {
+							up: 'w',
+							down: 's'
+						}}})
+	</script>
+
+</body>
+
+</html>
