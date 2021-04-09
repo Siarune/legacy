@@ -8,19 +8,20 @@
     <title>Projects</title>
     <link href="../css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
     <link href="../css/projects.css" rel="stylesheet" type="text/css">
-    <link href="bb.css" rel="stylesheet" type="text/css">
+    <link href="../css/bb.css" rel="stylesheet" type="text/css">
+    <script src="../js/darkMode.js"></script>
 </head>
 
-<body>
-    <a id="back" href="../"><img src="../img/back.png" width="48px"></a>
+<body id="body">
+    <a id="back" href="../"><img src="../img/back.png" width="48px" id="picc" style="border-radius: 100%;"></a>
     <!-- Main Container -->
-    <div class="container">
+    <div class="container" id="cont">
         <!-- Header -->
-        <header class="header">
+        <header class="header" id="head">
             <h4 class="logo">My Projects&nbsp;</h4>
         </header>
 
-        <div class="gallery">
+        <div class="gallery" id="gallery">
             <!Dino>
                 <div class="thumbnail"> <a href="games/dino.html">
                         <img src="../img/dino.jpg" alt="" width="450" class="cards" /></a>
@@ -191,7 +192,8 @@
                                                                                         </h4>
                                                                                         <p class="tag">Something</p>
                                                                                         <p class="text_column">
-                                                                                            Horrible poetry me and my friends made. And a song.
+                                                                                            Horrible poetry me and my
+                                                                                            friends made. And a song.
                                                                                         </p>
                                                                                     </div>
                                                                                     <!Nuclear>
@@ -210,36 +212,51 @@
                                                                                             </p>
                                                                                         </div>
                                                                                         <!Loading Simulator>
-                                                                                        <div class="thumbnail"><a
-                                                                                                href="pages/progress.html">
-                                                                                                <img src="../img/loading.png"
-                                                                                                    alt="" width="243"
-                                                                                                    class="cards" /></a>
-                                                                                            <h4><a
-                                                                                                    href="pages/progress.html">Loading Simulator 2000</a></h4>
-                                                                                            <p class="tag">Something
-                                                                                            </p>
-                                                                                            <p class="text_column">
-                                                                                                You gotta be super bored for this.
-                                                                                            </p>
-                                                                                        </div>
-                                                                                        <!Bart>
-                                                                                        <div class="thumbnail"><a
-                                                                                                href="pages/bart.html">
-                                                                                                <img src="../img/bart.png"
-                                                                                                    alt="" width="243"
-                                                                                                    class="cards" /></a>
-                                                                                            <h4><a
-                                                                                                    href="pages/bart.html">Bartholomew</a></h4>
-                                                                                            <p class="tag">Discord Bot
-                                                                                            </p>
-                                                                                            <p class="text_column">
-                                                                                                He hates everything and it's great.
-                                                                                            </p>
-                                                                                        </div>
+                                                                                            <div class="thumbnail"><a
+                                                                                                    href="pages/progress.html">
+                                                                                                    <img src="../img/loading.png"
+                                                                                                        alt=""
+                                                                                                        width="243"
+                                                                                                        class="cards" /></a>
+                                                                                                <h4><a
+                                                                                                        href="pages/progress.html">Loading
+                                                                                                        Simulator
+                                                                                                        2000</a></h4>
+                                                                                                <p class="tag">Something
+                                                                                                </p>
+                                                                                                <p class="text_column">
+                                                                                                    You gotta be super
+                                                                                                    bored for this.
+                                                                                                </p>
+                                                                                            </div>
+                                                                                            <!Bart>
+                                                                                                <div class="thumbnail">
+                                                                                                    <a
+                                                                                                        href="pages/bart.html">
+                                                                                                        <img src="../img/bart.png"
+                                                                                                            alt=""
+                                                                                                            width="243"
+                                                                                                            class="cards" /></a>
+                                                                                                    <h4><a
+                                                                                                            href="pages/bart.html">Bartholomew</a>
+                                                                                                    </h4>
+                                                                                                    <p class="tag">
+                                                                                                        Discord Bot
+                                                                                                    </p>
+                                                                                                    <p
+                                                                                                        class="text_column">
+                                                                                                        He hates
+                                                                                                        everything and
+                                                                                                        it's great.
+                                                                                                    </p>
+                                                                                                </div>
         </div>
     </div>
-
+    <!--
+    <input type="button" id="darkModeButton" value="OFF" onclick="toggle(this);"
+        style="position: fixed; bottom: 10px; right: 10px;">
+    <tag for="darkModeButton" style="position: fixed; bottom:40px; right: 20px; font-size: small; ">dark mode</tag>
+    -->
 </body>
 <footer id="foot">
     <center>
