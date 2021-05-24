@@ -5,42 +5,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: whitesmoke;
+  color: #FFFCF2;
 }
 
 body {
   height: 100vh;
-  background-color: #272727;
-  font-family: "anonymous-pro";
+  background-color:#0C1821;
+  font-family: "anonymous pro";
   min-height: 100%;
 }
 
 nav {
     align-content: center;
-	background-color: darkcyan;
-	border-bottom: 5px solid #034A44;
+	background-color: #1B2A41;
+	border-bottom: 5px solid #324A5F;
     min-height: 40px;
 	height: auto;
 	position: fixed;
 	width: 100%;
-    padding: 10px;
+    padding: 5px;
 }
 
 .link {
     text-decoration: none;
     font-size: 25px;
     margin: 15px;
-}
-
-#mid {
-	background-color: black;
-	width: 95%;
-	height: 100%;
-	align-self: center;
-	position: relative;
-	left: 2.5%;
-	z-index: -2;
-    overflow: hidden;
 }
 
 .text {
@@ -77,12 +66,11 @@ nav {
 
 footer {
 	height: auto;
-	background-color: darkslategray;
+	background-color: #1B2A41;
 	padding: 10px;
 	position: fixed;
 	bottom: 0;
-	width: 95%;
-	left: 2.5%;
+	width: 100%;
 	z-index: -1;
 }
 
