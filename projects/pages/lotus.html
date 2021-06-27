@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lotus</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        #content {
+            margin-top: 160px;
+        }
+
+        .boxes {
+            border: 5px whitesmoke outset;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 7.5px;
+            animation: changeBorderColor 45s infinite;
+        }
+
+        @keyframes changeBorderColor {
+            7% {
+                border-color: #FFADAD;
+            }
+
+            14% {
+                border-color: #FFD6A5;
+            }
+
+            21% {
+                border-color: #FDFFB6;
+            }
+
+            28% {
+                border-color: #CAFFBF;
+            }
+
+            35% {
+                border-color: #9BF6FF;
+            }
+
+            42% {
+                border-color: #A0C4FF;
+            }
+
+            49% {
+                border-color: #BDB2FF;
+            }
+
+            56% {
+                border-color: #FFC6FF;
+            }
+
+            63% {
+                border-color: #BDB2FF;
+            }
+
+            70% {
+                border-color: #A0C4FF;
+            }
+
+            77% {
+                border-color: #9BF6FF;
+            }
+
+            84% {
+                border-color: #CAFFBF;
+            }
+
+            91% {
+                border-color: #FDFFB6;
+            }
+
+            98% {
+                border-color: #FFD6A5;
+            }
+
+            100% {
+                border-color: #FFADAD;
+            }
+
+        }
+
+        #button {
+            width: 50px;
+            height: 25px;
+            border: none;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="content">
+        <div class="boxes" style="width: 500px; height: 500px;">
+            <div class="boxes" style="width: 475px; height: 475px;">
+                <div class="boxes" style="width: 450px; height: 450px;">
+                    <div class="boxes" style="width: 425px; height: 425px;">
+                        <div class="boxes" style="width: 400px; height: 400px;">
+                            <div class="boxes" style="width: 375px; height: 375px;">
+                                <div class="boxes" style="width: 350px; height: 350px;">
+                                    <div class="boxes" style="width: 325px; height: 325px;">
+                                        <div class="boxes" style="width: 300px; height: 300px;">
+                                            <div class="boxes" style="width: 275px; height: 275px;">
+                                                <div class="boxes" style="width: 250px; height: 250px;">
+                                                    <div class="boxes" style="width: 225px; height: 225px;">
+                                                        <div class="boxes" style="width: 200px; height: 200px;">
+                                                            <div class="boxes" style="width: 175px; height: 175px;">
+                                                                <div class="boxes" style="width: 150px; height: 150px;">
+                                                                    <div class="boxes"
+                                                                        style="width: 125px; height: 125px;">
+                                                                        <div class="boxes"
+                                                                            style="width: 100px; height: 100px;">
+                                                                            <div class="boxes"
+                                                                                style="width: 75px; height: 75px;">
+                                                                                <div class="boxes"
+                                                                                    style="width: 50px; height: 50px;">
+                                                                                    <div class="boxes"
+                                                                                        style="width: 25px; height: 25px;">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <center>
+            <div id="settings">
+                <input id="button" type="button" value="Start" onclick="toggle(this);">
+                <br>
+                <input id="slider" type="range" value="10" min="1" max="100" step="0.01">
+            </div>
+        </center>
+
+    
+
+    <script>
+        const button = document.getElementById("button");
+        const slider = document.getElementById("slider");
+        var interval;
+        var increment;
+        var value = 0;
+
+        function Spin() {
+            increment = slider.value / 1000;
+            value += increment;
+
+            if (value >= 360) {
+                value = 0;
+            }
+
+            document.getElementsByClassName("boxes")[0].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[1].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[2].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[3].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[4].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[5].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[6].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[7].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[8].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[9].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[10].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[11].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[12].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[13].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[14].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[15].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[16].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[17].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[18].style.rotate = value + "deg";
+            document.getElementsByClassName("boxes")[19].style.rotate = value + "deg";
+        }
+
+        function start() {
+            interval = window.setInterval(Spin, 10);
+            document.getElementsByClassName("boxes")[0].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[1].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[2].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[3].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[4].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[5].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[6].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[7].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[8].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[9].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[10].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[11].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[12].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[13].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[14].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[15].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[16].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[17].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[18].style.animationPlayState = 'running';
+            document.getElementsByClassName("boxes")[19].style.animationPlayState = 'running';
+        }
+
+        function stop() {
+            window.clearInterval(interval);
+            document.getElementsByClassName("boxes")[0].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[1].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[2].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[3].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[4].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[5].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[6].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[7].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[8].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[9].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[10].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[11].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[12].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[13].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[14].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[15].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[16].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[17].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[18].style.animationPlayState = 'paused';
+            document.getElementsByClassName("boxes")[19].style.animationPlayState = 'paused';
+        }
+
+        function toggle(button) {
+
+            if (button.value == "Start") {
+                button.value = "Stop";
+                start();
+                //settings.style.opacity = 0;
+                //settings.style.pointerEvents = "none";
+
+            } 
+            
+            else if (button.value == "Stop") {
+                button.value = "Start";
+                stop();
+            } 
+            
+            else {
+                button.value = "Start";
+                stop();
+            }
+        }
+        window.onload = stop();
+    </script>
+</body>
+
+</html>
