@@ -1,3 +1,14 @@
+* {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+body {
+  background-color: darkgray;
+}
+
+
+
 .background    { 
   background: gray;
   table-layout: fixed;
@@ -10,19 +21,15 @@
 
 .lava { 
   background-image: url(lava2.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 .ice { 
   background-image: url(ice.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;}
+}
 
 .wall { 
   background-image: url(whiteBlock.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;  }
+}
 
 .actor  { 
   position: absolute;  
@@ -30,43 +37,31 @@
 
 .player { 
   background-image: url(jim_2.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
 }
 
 .floater { 
   background-image: url(blackBlock.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;  
 }
 
 .bounce {
   background-image: url(purplePotion3.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   }
 
 .coin { 
   background-image: url(coin4.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   }
 
 .orb { 
   background-image: url(coin4.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;}
+}
 
 .potion {
   background-image: url(greenPotion.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
   }
 
 .health {
   background-image: url(healthPotion.png);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;}
+}
 
 
 .game {
@@ -75,6 +70,8 @@
   max-height: 450px;
   position: relative;
   cursor: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lost .player {

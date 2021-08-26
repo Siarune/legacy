@@ -1,46 +1,300 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>A Website</title>
-        <link href="css/index.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" type="image/png" href="img/hentie.png"/>
-        <link rel="icon" type="image/png" href="img/hentie.png">
-        <link rel="stylesheet" href="https://use.typekit.net/jkt6guq.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>idk</title>
+    <link href="css/beta.css" rel="stylesheet" type="text/css">
+    <script src="js/beta.js"></script>
+</head>
+
 <body>
-    <nav>
-        <center>
-            <a class="link" href="./">Home</a>
-            <a class="link" href="projects/">Projects</a>
-            <a class="link" href="about.html">About Me</a>
-        <center>
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+
+            <li class="nav-item intro">
+                <img class="thumbnail" src="/img/recolor.png">
+                <h2>Siarune</h2>
+            </li>
+
+            <li class="nav-item">
+                <h2>
+                    Home
+                </h2>
+            </li>
+
+            <!-- Dropdown of my other links -->
+            <li class="nav-item has-dropdown">
+                <h2>
+                    <a href="#">Links</a>
+                </h2>
+                <ul class="dropdown">
+                    <li class="dropdown-item">
+                        <a href="https://github.com/Siarune/">Github</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                        <a href="https://siarune.tumblr.com/">Tumblr</a>
+                    </li>
+
+                    <li class="dropdown-item tooltip" >
+                        <a href="#" onclick="copy()">Discord</a>
+                        <span id="copy" class="tooltiptext">Copy ID?</span>
+                    </li>
+                </ul>
+            </li>
+
+
+            </div>
+        </ul>
     </nav>
-
-
-
     <center>
-		<div id="post">
-	    <p>Welcome to the Idiot Corner</p>
-	    </div>	
-		
-	    <div class="text">
-		    <h2>Info</h2>
-		    <p>Yeah, this place is kind of empty. You can check out my projects, or just leave. I won't blame you- it's boring here.</p>
-            <br>
-            <p>Uh, here's a nyan cat?</p>
-            <img id="nyan" src="img/nyan.gif"> 
-        </div>		
-</center>
+        <div class="shiny">
 
+            <ul>
+                <li>Welcome to the Idiot Corner!</li>
+            </ul>
+
+        </div>
+    </center>
+
+    <section class="grid">
+
+        <div class="card">
+            <a href="/projects/games/dino.html">
+                <img src="/img/dino.jpg" class="cover">
+                <h3 class="Title"><a href="projects/games/dino.html">Dino</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    The classic dinosaur game I ripped.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/progress.html">
+                <img src="/img/loading.png" class="cover">
+                <h3 class="Title"><a href="/projects/pages/progress.html">Loading Simulator</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    You gotta be super bored for this.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/games/snake.html">
+                <img src="/img/snake.png" class="cover">
+                <h3 class="Title"><a href="projects/games/snake.html">Snake</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    Snekkkkk
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/games/tetris.html">
+                <img src="/img/tetris.jpg" class="cover">
+                <h3 class="Title"><a href="projects/games/tetris.html">Tetris</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    Bad janky tetris but still tetris.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/games/jim.html">
+                <img src="/img/jimlsd.png" class="cover">
+                <h3 class="Title"><a href="projects/games/jim.html">Jim</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    You can play it, but you'll hate it as
+                    much as I do.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/games/russianroulette.html">
+                <img src="/img/nyangun.png" class="cover">
+                <h3 class="Title"><a href="projects/games/russianroulette.html">Russian Roulette</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    Made it at like 4am to play in class.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/games/2048.html">
+                <img src="/img/2048.png" class="cover">
+                <h3 class="Title"><a href="projects/games/2048.html">2048</a></h3>
+                <h5 class="Tag">Game</h5>
+                <h4 class="Description">
+                    Classic rage game that I definitely beat.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/ascii/elmo.html">
+                <img src="/img/elmo.jpg" class="cover">
+                <h3 class="Title"><a href="projects/ascii/elmo.html">Elmo</a></h3>
+                <h5 class="Tag">ASCII Art</h5>
+                <h4 class="Description">
+                    Applaud your new overlord.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/ascii/squidward.html">
+                <img src="/img/squidward.jpg" class="cover">
+                <h3 class="Title"><a href="projects/ascii/squidward.html">Squidward</a></h3>
+                <h5 class="Tag">ASCII Art</h5>
+                <h4 class="Description">
+                    Our lord and savior.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/ascii/deusvult.html">
+                <img src="/img/deusvult2.jpg" class="cover">
+                <h3 class="Title"><a href="projects/ascii/deusvult.html">Duesvult</a></h3>
+                <h5 class="Tag">ASCII Art</h5>
+                <h4 class="Description">
+                    Chibi knight to the rescue!
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/ascii/derp.html">
+                <img src="/img/derp.jpg" class="cover">
+                <h3 class="Title"><a href="projects/">Derp</a></h3>
+                <h5 class="Tag">ASCII Art</h5>
+                <h4 class="Description">
+                    Derp.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/owo/bible.html">
+                <img src="/img/biblecrack.jpg" class="cover">
+                <h3 class="Title"><a href="projects/owo/bible.html">Biblowo</a></h3>
+                <h5 class="Tag">OwO</h5>
+                <h4 class="Description">
+                    How long is the new testament? Too long for my computer to process thats how long.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/owo/bee.html">
+                <img src="/img/bee.jpg" class="cover">
+                <h3 class="Title"><a href="projects/owo/bee.html">Bee</a></h3>
+                <h5 class="Tag">OwO</h5>
+                <h4 class="Description">
+                    Yes, the Bee Movie script. No, I was not high.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/owo/shrek.html">
+                <img src="/img/shrek.jpg" class="cover">
+                <h3 class="Title"><a href="projects/owo/shrek.html">Shrek 2</a></h3>
+                <h5 class="Tag">OwO</h5>
+                <h4 class="Description">
+                    You know I had to.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/owo/COMMUNISM.html">
+                <img src="/img/communist.jpg" class="cover">
+                <h3 class="Title"><a href="projects/owo/COMMUNISM.html">Communism</a></h3>
+                <h5 class="Tag">OwO</h5>
+                <h4 class="Description">
+                    The Communist Manifesto for Gen-Z trash.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/owo/Constitution.html">
+                <img src="/img/britain.jpg" class="cover">
+                <h3 class="Title"><a href="projects/owo/Constitution.html">Constitution</a></h3>
+                <h5 class="Tag">OwO</h5>
+                <h4 class="Description">
+                    I pwedge awwegiance to the fwag...
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/annoying.html">
+                <img src="/img/annoying.jpg" class="cover">
+                <h3 class="Title"><a href="projects/pages/annoying.html">Annoying</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    I dont even know anymore, this was like my first webpage.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/dictionary.html">
+                <img src="/img/urbandict.jpeg" class="cover">
+                <h3 class="Title"><a href="projects/pages/dictionary.html">Dictionary</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    An incomplete dictionary of weird words I found.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/poems.html">
+                <img src="/img/barney.jpg" class="cover">
+                <h3 class="Title"><a href="projects/pages/poems.html">Poems</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    Horrible poetry I made or found.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/nuclear.html">
+                <img src="/img/nuclear.png" class="cover">
+                <h3 class="Title"><a href="projects/pages/nuclear.html">Nuclear</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    *Severe epilepsy warning*
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/bart.html">
+                <img src="/img/bart.png" class="cover">
+                <h3 class="Title"><a href="projects/pages/bart.html">Bart</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    My very own discord bot... that hates everything.
+                </h4>
+        </div>
+
+        <div class="card">
+            <a href="/projects/pages/lotus.html">
+                <img src="/img/lotus.png" class="cover">
+                <h3 class="Title"><a href="projects/pages/lotus.html">Lotus</a></h3>
+                <h5 class="Tag">Something</h5>
+                <h4 class="Description">
+                    I don't really know but I think it looks nice.
+                </h4>
+        </div>
+
+    </section>
+
+    <footer class="foot">
+
+        <hr>
+
+        <center>
+            <h3>
+                And more to come! When? I have no idea!
+            </h3>
+        </center>
+    </footer>
 
 </body>
-
-	<footer>
-	    <div id="foot">
-	        <p>Made with an ancient pc and lots of crying.</p>
-	        <p>I would say I update all the time, but that would be a lie</p>
-	    </div>
-	</footer>
 
 </html>
