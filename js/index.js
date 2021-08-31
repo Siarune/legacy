@@ -17,3 +17,12 @@ window.onclick = function(event) {
     }
   }
 }
+
+function copy() {
+  navigator.clipboard.writeText("Siarune#0047");
+  document.getElementById("copy").innerHTML = "Copied!"
+}
+
+function reset() {
+  document.getElementById("copy").innerHTML = "Copy ID?"
+}
