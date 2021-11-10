@@ -1,0 +1,98 @@
+:root {
+    --time: 60s;
+    --offset:1000ms;
+    --inc: 25px;
+}
+
+body {
+    background-color: black;
+    
+}
+
+body::-webkit-scrollbar ::-webkit-scrollbar-track {
+    display: none;
+}
+
+
+#content {
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes {
+    border: 5px #00b4d8 outset;
+    animation: Spinnn var(--time) infinite;
+    animation-duration: var(--time);
+    position: relative;
+}
+
+@keyframes Spinnn {
+
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+
+}
+
+#button {
+    width: 50px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    background: gainsboro;
+}
+
+.slider {
+    width: 15vh;
+    -webkit-appearance: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    appearance: none;
+    outline: none;
+    border-radius: 20px;
+    opacity: 0.9;
+    background-color: gainsboro;
+    overflow: hidden;
+    filter: brightness(0.9);
+}
+
+.slider:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    filter: brightness(1);
+    transition: all 500ms ease-in-out;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 10px;
+    cursor: ew-resize;
+    box-shadow:
+        inset 0 0 0px 10px goldenrod,
+        -25px 0 0 10px goldenrod,
+        -60px 0 0 10px goldenrod,
+        -90px 0 0 10px goldenrod,
+        -120px 0 0 10px goldenrod,
+        -150px 0 0 10px goldenrod;
+}
+
+#settings {
+    position: absolute;
+    bottom: 15%;
+    left: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 10px;
+}

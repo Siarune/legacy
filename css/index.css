@@ -1,10 +1,16 @@
+:root {
+  --perc: 10%;
+}
+
 * {
   color: whitesmoke;
 }
 
 body {
-  background: #131313;
   font-family: sans-serif;
+  width: 100%;
+  margin: 0;
+  background: #131313;
   background-image: linear-gradient(#36454F 50px, black);
 }
 
@@ -18,6 +24,20 @@ li {
 a {
   color: currentColor;
   text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  display: none;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #5c7281;
+  border-radius: 7.5px;
 }
 
 /* Dropdown menu shit */
@@ -36,7 +56,7 @@ a {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
   transform: translateX(-40%);
   transition: opacity 0.15s ease-out;
-  background-color: cadetblue;
+  background-color: #2b696b;
   pointer-events: none;
 }
 
@@ -64,11 +84,9 @@ a {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
   background: #353535;
   font-size: 2rem;
-  color: aliceblue;
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   min-height: 200px;
   height: 100%;
@@ -79,43 +97,29 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  animation: cardEntrance 700ms ease-out;
+  animation: cardEntrance 700ms cubic-bezier(0.55, 0.09, 0.68, 0.53);
   animation-fill-mode: backwards;
   --stagger-delay: 150ms;
 }
+.card .Title,
+.card .Tag,
+.card .Description {
+  width: 95%;
+  padding: 2.5px;
+  margin: 2.5px;
+}
 .card .Title {
   font-size: 1.5rem;
-  width: 80%;
-  margin-top: 0px;
-  margin-bottom: 0;
   color: #9c4442;
-}
-.card .Title a {
-  display: block;
-  margin-left: 5px;
-  position: relative;
-  right: 20px;
 }
 .card .Tag {
   font-size: 1rem;
   color: #dbb66f;
-  text-align: right;
-  margin-left: 140px;
-  margin-right: 25px;
-  margin-bottom: 0;
-  width: 50%;
-  float: right;
-  margin-top: 3px;
-  position: relative;
-  bottom: 25px;
 }
 .card .Description {
   color: #c0fdff;
   font-size: 1.2rem;
-  width: 90%;
-  height: 25%;
-  margin-left: auto;
-  margin-right: auto;
+  justify-content: flex-end;
 }
 
 .card:hover {
@@ -148,11 +152,8 @@ a {
   0% {
     filter: hue-rotate(0deg);
   }
-  50% {
-    filter: hue-rotate(180deg);
-  }
   100% {
-    filter: hue-rotate(0deg);
+    filter: hue-rotate(180deg);
   }
 }
 /* stagger calc */
