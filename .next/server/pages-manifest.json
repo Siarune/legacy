@@ -1,6 +1,10 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/backup": "pages/backup.html",
+  "/": "pages/index.html",
+  "/projects/poetry": "pages/projects/poetry.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/404": "pages/404.html"
 }
