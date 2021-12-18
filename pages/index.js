@@ -1,16 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
-//import defaultStyles from '../styles/Home.module.css'
 import styles from '../styles/main.module.scss'
+// import ScriptTag from 'react-script-tag'
+
+// const copy = () => (
+//   <ScriptTag type="text/javascript" src="copy.js" />
+//   )
 
 export default function Home() {
   return (
     <div className={styles.main}>
       <Head>
         <title>Siarune</title>
-        <meta name={styles.Description} content="My weird little site." />
-        <link rel="icon" href="/hentie.png" />
+        <meta name={styles.Description} content="My stupid little site" />
+        <link rel="icon" href="/thumbnails/recolor.png" />
       </Head>
 
       <main className={styles.main}>
@@ -20,7 +23,9 @@ export default function Home() {
           <ul className={styles.navbarNav}>
 
             <li className={styles.navItem, styles.intro}>
-              <img className={styles.thumbnail} src="/thumbnails/recolor.png"></img>
+              <Image src="/thumbnails/recolor.png" alt="chikin" className="styles.thumbnail" width="100" height="100" layout="responsive" ></Image>
+              {/* <img className={styles.thumbnail} src="/thumbnails/recolor.png"></img> */}
+              {/* <Image src="/thumbnails/dino.jpg" alt="dino" className={styles.cover} width="100" height="100" layout="responsive" /> */}
               <h2>Siarune</h2>
             </li>
 
@@ -45,8 +50,8 @@ export default function Home() {
                 </li>
 
                 <li className={styles.dropdownItem, styles.tooltip}>
-                  <a href="#" onClick="copy()">Discord</a>
-                  <span id="copy" className={styles.tooltiptext}>Copy ID?</span>
+                  <a href="#" >Discord</a>
+                  <span className={styles.tooltiptext}>Copy ID?</span>
                 </li>
 
 
@@ -69,7 +74,6 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/games/dino.html" className={styles.link}></a>
-            {/* <img src="/thumbnails/dino.jpg" className={styles.cover}></img> */}
             <Image src="/thumbnails/dino.jpg" alt="dino" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/dino.html">Dino</a></h3>
             <h5 className={styles.Tag}>Game</h5>
@@ -80,7 +84,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/progress.html" className="link"></a>
-            <img src="/thumbnails/loading.png" className="styles.cover"></img>
+            <Image src="/thumbnails/loading.png" alt="loading" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="/projects/pages/progress.html">Loading Simulator</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
@@ -90,7 +94,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/games/snake.html" className="link"></a>
-            <img src="/thumbnails/snake.png" className="styles.cover"></img>
+            <Image src="/thumbnails/snake.png" alt="snake" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/snake.html">Snake</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
@@ -100,7 +104,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/games/tetris.html" className="link"></a>
-            <img src="/thumbnails/tetris.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/tetris.jpg" alt="tetris" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/tetris.html">Tetris</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
@@ -110,28 +114,28 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/games/jim.html" className="link"></a>
-            <img src="/thumbnails/jimlsd.png" className="styles.cover"></img>
+            <Image src="/thumbnails/jimlsd.png" alt="jimlsd" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/jim.html">Jim</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
-              You can play it, but you'll hate it as
+              You can play it, but you&aposll hate it as
               much as I do.
             </h4>
           </div>
 
           <div className={styles.card}>
             <a href="/projects/games/russianroulette.html" className="link"></a>
-            <img src="/thumbnails/nyangun.png" className="styles.cover"></img>
+            <Image src="/thumbnails/nyangun.png" alt="nyangun" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/russianroulette.html">Russian Roulette</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
-              Made it at like 4am to play in class.
+              Made it at like 4am to play in className.
             </h4>
           </div>
 
           <div className={styles.card}>
             <a href="/projects/games/2048.html" className="link"></a>
-            <img src="/thumbnails/2048.png" className="styles.cover"></img>
+            <Image src="/thumbnails/2048.png" alt="2048" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/2048.html">2048</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
@@ -141,7 +145,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/games/flappy.html" className="link"></a>
-            <img src="/thumbnails/flappy.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/flappy.jpg" alt="flappy" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/games/flappy.html">Flappy Box</a></h3>
             <h5 className={styles.Tag}>Game</h5>
             <h4 className={styles.Description}>
@@ -151,7 +155,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/ascii/elmo.html" className="link"></a>
-            <img src="/thumbnails/elmo.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/elmo.jpg" alt="elmo" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/ascii/elmo.html">Elmo</a></h3>
             <h5 className={styles.Tag}>ASCII Art</h5>
             <h4 className={styles.Description}>
@@ -161,7 +165,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/ascii/squidward.html" className="link"></a>
-            <img src="/thumbnails/squidward.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/squidward.jpg" alt="squidward" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/ascii/squidward.html">Squidward</a></h3>
             <h5 className={styles.Tag}>ASCII Art</h5>
             <h4 className={styles.Description}>
@@ -171,7 +175,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/ascii/deusvult.html" className="link"></a>
-            <img src="/thumbnails/deusvult2.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/deusvult2.jpg" alt="deusvult" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/ascii/deusvult.html">Duesvult</a></h3>
             <h5 className={styles.Tag}>ASCII Art</h5>
             <h4 className={styles.Description}>
@@ -181,7 +185,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/ascii/derp.html" className="link"></a>
-            <img src="/thumbnails/derp.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/derp.jpg" alt="derp" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/">Derp</a></h3>
             <h5 className={styles.Tag}>ASCII Art</h5>
             <h4 className={styles.Description}>
@@ -191,7 +195,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/owo/bible.html" className="link"></a>
-            <img src="/thumbnails/biblecrack.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/biblecrack.jpg" alt="biblecrack" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/owo/bible.html">Biblowo</a></h3>
             <h5 className={styles.Tag}>OwO</h5>
             <h4 className={styles.Description}>
@@ -201,7 +205,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/owo/bee.html" className="link"></a>
-            <img src="/thumbnails/bee.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/bee.jpg" alt="bee" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/owo/bee.html">Bee</a></h3>
             <h5 className={styles.Tag}>OwO</h5>
             <h4 className={styles.Description}>
@@ -211,7 +215,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/owo/shrek.html" className="link"></a>
-            <img src="/thumbnails/shrek.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/shrek.jpg" alt="shrek" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/owo/shrek.html">Shrek 2</a></h3>
             <h5 className={styles.Tag}>OwO</h5>
             <h4 className={styles.Description}>
@@ -221,7 +225,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/owo/COMMUNISM.html" className="link"></a>
-            <img src="/thumbnails/communist.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/communist.jpg" alt="communist" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/owo/COMMUNISM.html">Communism</a></h3>
             <h5 className={styles.Tag}>OwO</h5>
             <h4 className={styles.Description}>
@@ -231,7 +235,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/owo/Constitution.html" className="link"></a>
-            <img src="/thumbnails/britain.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/britain.jpg" alt="britain" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/owo/Constitution.html">Constitution</a></h3>
             <h5 className={styles.Tag}>OwO</h5>
             <h4 className={styles.Description}>
@@ -241,7 +245,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/annoying.html" className="link"></a>
-            <img src="/thumbnails/annoying.jpg" className="styles.cover"></img>
+            <Image src="/thumbnails/annoying.jpg" alt="annoying" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/pages/annoying.html">Annoying</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
@@ -251,7 +255,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/dictionary.html" className="link"></a>
-            <img src="/thumbnails/urbandict.jpeg" className="styles.cover"></img>
+            <Image src="/thumbnails/urbandict.jpeg" alt="urbandict" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/pages/dictionary.html">Dictionary</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
@@ -260,9 +264,9 @@ export default function Home() {
           </div>
 
           <div className={styles.card}>
-            <a href="/projects/poetry" className="link"></a>
-            <img src="/thumbnails/barney.jpg" className="styles.cover"></img>
-            <h3 className={styles.Title}><a href="projects/poetry">Poems</a></h3>
+            <a href="/projects/pages/poems.html" className="link"></a>
+            <Image src="/thumbnails/barney.jpg" alt="barney" className={styles.cover} width="100" height="100" layout="responsive" />
+            <h3 className={styles.Title}><a href="projects/pages/poems.html">Poems</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
               Horrible poetry I made or found.
@@ -271,7 +275,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/nuclear.html" className="link"></a>
-            <img src="/thumbnails/nuclear.png" className="styles.cover"></img>
+            <Image src="/thumbnails/nuclear.png" alt="nuclear" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/pages/nuclear.html">Nuclear</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
@@ -281,7 +285,7 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/bart.html" className="link"></a>
-            <img src="/thumbnails/bart.png" className="styles.cover"></img>
+            <Image src="/thumbnails/bart.png" alt="bart" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/pages/bart.html">Bart</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
@@ -291,11 +295,11 @@ export default function Home() {
 
           <div className={styles.card}>
             <a href="/projects/pages/lotus.html" className="link"></a>
-            <img src="/thumbnails/lotus.png" className="styles.cover"></img>
+            <Image src="/thumbnails/lotus.png" alt="lotus" className={styles.cover} width="100" height="100" layout="responsive" />
             <h3 className={styles.Title}><a href="projects/pages/lotus.html">Lotus</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
-              I don't really know but I think it looks nice.
+              I don&apost really know but I think it looks nice.
             </h4>
           </div>
 

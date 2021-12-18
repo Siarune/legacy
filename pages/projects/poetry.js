@@ -38,8 +38,8 @@ export default function Poetry() {
                                 express my dismay. <br></br> <br></br>
                                 Because spooky scary skeletons <br></br>
                                 that sent shivers down my spine <br></br>
-                                they're shrieking skulls <br></br>
-                                won't shock my skull <br></br>
+                                they&aposre shrieking skulls <br></br>
+                                won&apost shock my skull <br></br>
                                 or seal my doom tonight. <br></br> <br></br>
                                 But the spook lives on <br></br>
                                 every day of the year. <br></br>
@@ -127,9 +127,9 @@ export default function Poetry() {
                             I lay here tired <br></br>
                             In worry mired <br></br>
                             Trying to fall asleep <br></br> <br></br>
-                            But my family's loud as fuck <br></br>
+                            But my family&aposs loud as fuck <br></br>
                             And cringy memories are stuck <br></br>
-                            So I guess I'll count some sheep
+                            So I guess I&aposll count some sheep
                         </p>
                         <div className={styles.littleInfo}>
                             <p>
