@@ -5,47 +5,47 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/w1Bo-yl_NCfJ4tWK2QM8i/_buildManifest.js",
-    "static/w1Bo-yl_NCfJ4tWK2QM8i/_ssgManifest.js",
-    "static/w1Bo-yl_NCfJ4tWK2QM8i/_middlewareManifest.js"
+    "static/3AqPzrALr0EVbK1cNzfTL/_buildManifest.js",
+    "static/3AqPzrALr0EVbK1cNzfTL/_ssgManifest.js",
+    "static/3AqPzrALr0EVbK1cNzfTL/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
       "static/chunks/webpack-514908bffb652963.js",
       "static/chunks/framework-6e4ba497ae0c8a3f.js",
-      "static/chunks/main-c7e30e1aff19cdb7.js",
-      "static/chunks/959-6cb558d075490c3f.js",
-      "static/css/b540e4bccfedd35f.css",
-      "static/chunks/pages/index-b4622995e0c3a608.js"
+      "static/chunks/main-deb592798b94b511.js",
+      "static/chunks/959-5311424f4187cdaf.js",
+      "static/css/84b8b3645cda67b2.css",
+      "static/chunks/pages/index-bf6b64b4328fa0d7.js"
     ],
     "/_app": [
       "static/chunks/webpack-514908bffb652963.js",
       "static/chunks/framework-6e4ba497ae0c8a3f.js",
-      "static/chunks/main-c7e30e1aff19cdb7.js",
+      "static/chunks/main-deb592798b94b511.js",
       "static/css/27d177a30947857b.css",
-      "static/chunks/pages/_app-fb7ecd67e368caea.js"
+      "static/chunks/pages/_app-9cd1d19dd7237c4c.js"
     ],
     "/_error": [
       "static/chunks/webpack-514908bffb652963.js",
       "static/chunks/framework-6e4ba497ae0c8a3f.js",
-      "static/chunks/main-c7e30e1aff19cdb7.js",
+      "static/chunks/main-deb592798b94b511.js",
       "static/chunks/pages/_error-2280fa386d040b66.js"
     ],
     "/backup": [
       "static/chunks/webpack-514908bffb652963.js",
       "static/chunks/framework-6e4ba497ae0c8a3f.js",
-      "static/chunks/main-c7e30e1aff19cdb7.js",
-      "static/chunks/959-6cb558d075490c3f.js",
-      "static/css/e36e9ca00e00d53e.css",
-      "static/chunks/pages/backup-7da1f5906bf639a2.js"
+      "static/chunks/main-deb592798b94b511.js",
+      "static/chunks/959-5311424f4187cdaf.js",
+      "static/css/149b18973e5508c7.css",
+      "static/chunks/pages/backup-5912598faa4f931f.js"
     ],
     "/projects/poetry": [
       "static/chunks/webpack-514908bffb652963.js",
       "static/chunks/framework-6e4ba497ae0c8a3f.js",
-      "static/chunks/main-c7e30e1aff19cdb7.js",
-      "static/chunks/959-6cb558d075490c3f.js",
-      "static/css/d9c2b15341938661.css",
-      "static/chunks/pages/projects/poetry-f0a73ed4b37f1d1c.js"
+      "static/chunks/main-deb592798b94b511.js",
+      "static/chunks/959-5311424f4187cdaf.js",
+      "static/css/a4d178e5eb77f913.css",
+      "static/chunks/pages/projects/poetry-eb458997eb88cee6.js"
     ]
   },
   "ampFirstPages": []
