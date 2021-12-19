@@ -6,8 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start -p $PORT",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -b master -d build",
     "test": "next test",
     "eject": "next eject",
     "lint": "next lint"
