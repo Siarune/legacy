@@ -1,11 +1,15 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/main.module.scss'
+import styles from '../styles/index.module.scss'
 // import ScriptTag from 'react-script-tag'
 
 // const copy = () => (
 //   <ScriptTag type="text/javascript" src="copy.js" />
 //   )
+
+const reset = () => {
+
+}
 
 export default function Home() {
   return (
@@ -23,9 +27,7 @@ export default function Home() {
           <ul className={styles.navbarNav}>
 
             <li className={styles.navItem, styles.intro}>
-              <Image src="/thumbnails/recolor.png" alt="chikin" className="styles.thumbnail" width="100" height="100" layout="responsive" ></Image>
-              {/* <img className={styles.thumbnail} src="/thumbnails/recolor.png"></img> */}
-              {/* <Image src="/thumbnails/dino.jpg" alt="dino" className={styles.cover} width="100" height="100" layout="responsive" /> */}
+              {/* <Image src="/thumbnails/recolor.png" alt="chikin" className="styles.thumbnail" width="10" height="10" layout="fill" ></Image> */}
               <h2>Siarune</h2>
             </li>
 
@@ -38,7 +40,7 @@ export default function Home() {
             {/* <!-- Dropdown of my other links --> */}
             <li className={styles.navItem, styles.hasDropdown}>
               <h2>
-                <a href="#" onClick="reset()">Links</a>
+                <a href="#" onclick="reset()">Links</a>
               </h2>
               <ul className={styles.dropdown}>
                 <li className="dropdown-item">
