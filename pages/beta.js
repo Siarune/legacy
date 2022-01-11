@@ -108,7 +108,7 @@ export default function Home() {
             About Me
           </h2>
           <p>
-            Hey, Sia here. Nice place, huh? It's taken quite a few redesigns, and this certainly won't be the last.
+            Hey, Sia here. Nice place, huh? It's taken quite a few redesigns, and this certainly won't be the last. :3
           </p>
         </div>
 
