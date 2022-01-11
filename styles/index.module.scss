@@ -75,6 +75,7 @@
   font-size: medium;
   position: relative;
   bottom: 3px;
+  z-index: 5;
 }
 
 .intro {
@@ -83,7 +84,7 @@
 }
 
 .thumbnail {
-  width: 40px;
+  width: 20px;
   z-index: 101;
   position: sticky;
   margin-top: 25px;

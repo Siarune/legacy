@@ -29,6 +29,7 @@ export default function Home() {
             <li className={styles.navItem, styles.intro}>
               {/* <Image src="/thumbnails/recolor.png" alt="chikin" className="styles.thumbnail" width="10" height="10" layout="fill" ></Image> */}
               <h2>Siarune</h2>
+              {/* <Image src="/thumbnails/recolor.png" alt="chikin" className="styles.thumbnail" width="100" height="100" layout="responsive" ></Image> */}
             </li>
 
             <li className={styles.navItem}>
@@ -301,7 +302,7 @@ export default function Home() {
             <h3 className={styles.Title}><a href="projects/pages/lotus.html">Lotus</a></h3>
             <h5 className={styles.Tag}>Something</h5>
             <h4 className={styles.Description}>
-              I don&apost really know but I think it looks nice.
+              I don&t really know but I think it looks nice.
             </h4>
           </div>
 
