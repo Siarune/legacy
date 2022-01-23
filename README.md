@@ -1,3 +1,5 @@
-# siarune.github.io
+## Idiot Corner
 
-github made me add one
+I have no idea what's going on or what I'm doing
+
+Currently deployed [here](siarune.me).
