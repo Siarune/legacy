@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     //background-image: linear-gradient(#36454F 50px, black);
-    background:transparent;
+    background:black;
     display: none;
 }
 
@@ -189,7 +189,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* stagger calc */
-@for $i from 1 through 23 {
+@for $i from 1 through 25 {
     .card:nth-child(#{$i}) {
         animation-delay: calc(#{$i} * var(--stagger-delay));
     }
